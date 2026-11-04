@@ -1,150 +1,110 @@
-# ☕ GREKO ESPRESSO BAR
-
-### More Than Coffee. It's an Experience.
-
-A modern café website concept built around the art of coffee, thoughtful design, and memorable experiences. Explore signature beverages, discover your coffee mood, browse the menu, and experience a beautifully crafted digital café.
+# GREKO.
+### THE ART OF SLOWING DOWN.
 
 <p align="center">
-
+  <br/>
+  <strong>COFFEE. CRAFT. CONNECTION.</strong>
+  <br/><br/>
+  A digital experience inspired by the culture of coffee.
+  <br/><br/>
   <a href="https://greko-espresso-bar.vercel.app/">
-    <img src="https://img.shields.io/badge/EXPLORE_LIVE_WEBSITE-Visit_Greko-8B5E3C?style=for-the-badge" alt="Live Website"/>
+    <strong>EXPLORE GREKO ↗</strong>
   </a>
-
-</p>
-
-<p align="center">
-  <img src="https://img.shields.io/badge/React-19-61DAFB?style=flat-square&logo=react&logoColor=black"/>
-  <img src="https://img.shields.io/badge/Vite-8-646CFF?style=flat-square&logo=vite&logoColor=white"/>
-  <img src="https://img.shields.io/badge/Framer_Motion-Animations-black?style=flat-square"/>
-  <img src="https://img.shields.io/badge/Deployment-Vercel-black?style=flat-square&logo=vercel"/>
+  <br/><br/>
 </p>
 
 ---
 
-## ✦ ABOUT THE PROJECT
+## 01 / THE IDEA
 
-Greko Espresso Bar is a modern café website concept focused on creating an engaging online experience through elegant visuals, interactive elements, and smooth animations.
+Not just another café website.
 
-The project brings together café storytelling, coffee discovery, signature drinks, food menus, and reservation interfaces in one cohesive experience.
+**GREKO** is a digital café experience built around the feeling of walking into your favourite coffee spot — the aroma of freshly brewed coffee, carefully crafted drinks, warm interiors, and moments worth slowing down for.
 
-## ✨ FEATURES
+The idea was to translate that atmosphere into a modern, interactive web experience.
 
-- **Immersive Landing Page** — A visually engaging introduction to the café.
-- **Brew Finder** — An interactive coffee discovery experience.
-- **Signature Drinks** — Showcase of featured beverages.
-- **Food & Drinks Menu** — Explore the café's menu.
-- **Brewing Journey** — Discover the art behind every cup.
-- **Visual Gallery** — A collection of café-inspired imagery.
-- **Customer Reviews** — Dedicated customer feedback section.
-- **Table Reservations** — Frontend reservation interface.
-- **Smooth Animations** — Engaging transitions and motion effects.
-- **Responsive Layout** — Designed for different screen sizes.
+## 02 / INSIDE THE EXPERIENCE
 
-## 🛠️ TECH STACK
-
-| Technology | Purpose |
+| Experience | What it brings |
 |---|---|
-| React 19 | User interface |
-| Vite | Development and build tooling |
-| Framer Motion | UI animations |
-| Anime.js | Motion effects |
-| Lucide React | Icons |
-| CSS | Styling and layouts |
-| Vercel | Deployment |
+| THE INTRODUCTION | An immersive landing experience |
+| BREW FINDER | Discover coffee through an interactive experience |
+| SIGNATURES | Explore featured beverages |
+| THE MENU | A curated food and drinks experience |
+| THE PROCESS | A journey into the art of brewing |
+| THE SPACE | A visual café gallery |
+| THE COMMUNITY | Customer reviews and feedback |
+| RESERVATIONS | An interactive table reservation interface |
 
-## 📸 PREVIEW
+## 03 / THE CREATIVE STACK
 
-Explore the complete experience:
+Built with a combination of modern frontend technologies.
 
-**[greko-espresso-bar.vercel.app](https://greko-espresso-bar.vercel.app/)**
+- **React 19** — Component-based interface
+- **Vite** — Fast development and production builds
+- **Framer Motion** — Smooth animations and transitions
+- **Anime.js** — Motion and visual interactions
+- **Lucide React** — Interface iconography
+- **CSS** — Layout, styling and responsive design
 
-<!-- Add project screenshots here -->
+## 04 / THE VISUAL DIRECTION
 
-## 📁 PROJECT STRUCTURE
+The experience focuses on:
 
-```text
-Greko-Espresso-Bar/
-│
-├── public/
-├── src/
-│   ├── assets/
-│   ├── components/
-│   ├── App.jsx
-│   ├── App.css
-│   ├── index.css
-│   └── main.jsx
-│
-├── index.html
-├── package.json
-├── package-lock.json
-├── vite.config.js
-└── README.md
-```
+- Warm café-inspired aesthetics
+- Elegant typography and visual hierarchy
+- Immersive imagery
+- Smooth transitions
+- Interactive sections
+- Responsive layouts
 
-## 🚀 GETTING STARTED
+## 05 / TAKE A LOOK
 
-Run the project locally using the following steps.
+<p align="center">
+  <a href="https://greko-espresso-bar.vercel.app/">
+    <strong>OPEN THE LIVE EXPERIENCE ↗</strong>
+  </a>
+</p>
 
-**1. Clone the repository**
+**Live:** https://greko-espresso-bar.vercel.app/
+
+## 06 / RUN IT LOCALLY
+
+Want to explore the project behind the experience?
 
 ```bash
 git clone https://github.com/YArora5/Greko-Espresso-Bar.git
-```
-
-**2. Navigate to the project**
-
-```bash
 cd Greko-Espresso-Bar
-```
-
-**3. Install dependencies**
-
-```bash
 npm install
-```
-
-**4. Start the development server**
-
-```bash
 npm run dev
 ```
 
-Open the local URL displayed in your terminal.
-
-## 📦 PRODUCTION BUILD
-
-Create an optimized production build:
+For a production build:
 
 ```bash
 npm run build
-```
-
-Preview the production build:
-
-```bash
 npm run preview
 ```
 
-## 📌 PROJECT SCOPE
+## 07 / PROJECT NOTES
 
-The reservation interface is currently frontend-based. Real-time booking management, backend integration, and database connectivity are not included.
+Greko is a frontend-focused café website concept. The reservation interface is currently a demonstration and does not process real bookings. Backend, database, and payment integrations are not included.
 
-## 👨‍💻 DEVELOPER
+## 08 / THE CREATOR
 
-### Yugal Arora
+**YUGAL ARORA**
 
-Creative developer passionate about building interactive digital experiences through design, technology, and experimentation.
+Creative developer exploring the intersection of design, technology, and interactive experiences.
 
-<p>
-  <a href="https://github.com/YArora5">GitHub</a> •
-  <a href="https://www.linkedin.com/in/yugal15">LinkedIn</a> •
-  <a href="https://yarora5.github.io/YArora5/">Portfolio</a>
-</p>
+[PORTFOLIO](https://yarora5.github.io/YArora5/) · [GITHUB](https://github.com/YArora5) · [LINKEDIN](https://www.linkedin.com/in/yugal15)
 
 ---
 
 <p align="center">
-  Designed & Developed with ☕ by <b>Yugal Arora</b>
   <br/>
-  <a href="https://greko-espresso-bar.vercel.app/">Experience Greko Espresso Bar →</a>
+  <strong>GOOD COFFEE. GOOD DESIGN. GOOD COMPANY.</strong>
+  <br/><br/>
+  Made with ☕ and creativity.
+  <br/>
+  <strong>GREKO.</strong>
 </p>
