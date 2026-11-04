@@ -1,0 +1,393 @@
+/* ===========================================
+   NAVBAR
+=========================================== */
+
+.navbar {
+  position: fixed;
+  top: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: calc(100% - 80px);
+  max-width: 1400px;
+
+  height: 84px;
+
+  padding: 0 35px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border-radius: 22px;
+
+  background: rgba(255, 248, 239, 0.72);
+
+  backdrop-filter: blur(18px);
+
+  border: 1px solid rgba(255,255,255,.25);
+
+  box-shadow: 0 18px 40px rgba(0,0,0,.08);
+
+  transition: .35s ease;
+
+  z-index: 999;
+}
+
+/* ===========================================
+   SCROLLED
+=========================================== */
+
+.navbar-scrolled{
+
+top:15px;
+
+height:72px;
+
+background:rgba(255,250,244,.92);
+
+box-shadow:0 18px 45px rgba(0,0,0,.14);
+
+}
+
+
+/* ===========================================
+   LOGO
+=========================================== */
+
+.logo{
+
+display:flex;
+
+flex-direction:column;
+
+gap:4px;
+
+}
+
+.logo-main{
+
+font-size:34px;
+
+font-family:"Cormorant Garamond",serif;
+
+font-weight:700;
+
+letter-spacing:4px;
+
+color:var(--primary);
+
+}
+
+.logo-accent{
+
+color:var(--secondary);
+
+}
+
+.logo-sub{
+
+font-size:10px;
+
+letter-spacing:5px;
+
+text-transform:uppercase;
+
+color:var(--text-light);
+
+}
+
+
+/* ===========================================
+   NAV LINKS
+=========================================== */
+
+.nav-links{
+
+display:flex;
+
+align-items:center;
+
+gap:42px;
+
+}
+
+.nav-links li{
+
+list-style:none;
+
+}
+
+.nav-links a{
+
+position:relative;
+
+font-size:13px;
+
+font-weight:500;
+
+letter-spacing:1px;
+
+color:var(--text);
+
+transition:.3s;
+
+}
+
+.nav-links a::after{
+
+content:"";
+
+position:absolute;
+
+left:0;
+
+bottom:-8px;
+
+width:0;
+
+height:2px;
+
+background:var(--secondary);
+
+border-radius:50px;
+
+transition:.35s;
+
+}
+
+.nav-links a:hover{
+
+color:var(--secondary);
+
+}
+
+.nav-links a:hover::after{
+
+width:100%;
+
+}
+
+
+/* ===========================================
+   BUTTON
+=========================================== */
+
+.visit-btn{
+
+display:flex;
+
+align-items:center;
+
+gap:10px;
+
+padding:14px 24px;
+
+background:var(--secondary);
+
+color:white;
+
+border-radius:999px;
+
+font-size:13px;
+
+font-weight:600;
+
+letter-spacing:1px;
+
+transition:.35s;
+
+}
+
+.visit-btn:hover{
+
+transform:translateY(-3px);
+
+background:var(--primary);
+
+box-shadow:0 15px 35px rgba(0,0,0,.18);
+
+}
+
+
+/* ===========================================
+   MOBILE BUTTON
+=========================================== */
+
+.mobile-btn{
+
+display:none;
+
+align-items:center;
+
+justify-content:center;
+
+width:48px;
+
+height:48px;
+
+border-radius:50%;
+
+background:white;
+
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+color:var(--primary);
+
+}
+
+
+/* ===========================================
+   MOBILE MENU
+=========================================== */
+
+.mobile-menu{
+
+position:absolute;
+
+top:95px;
+
+left:0;
+
+right:0;
+
+margin:auto;
+
+width:92%;
+
+display:flex;
+
+flex-direction:column;
+
+gap:18px;
+
+padding:28px;
+
+border-radius:22px;
+
+background:white;
+
+box-shadow:0 25px 60px rgba(0,0,0,.12);
+
+pointer-events:none;
+
+opacity:0;
+
+}
+
+.mobile-menu.active{
+
+opacity:1;
+
+pointer-events:auto;
+
+}
+
+.mobile-menu a{
+
+font-size:15px;
+
+font-weight:500;
+
+color:var(--text);
+
+padding:8px 0;
+
+border-bottom:1px solid rgba(0,0,0,.06);
+
+transition:.3s;
+
+}
+
+.mobile-menu a:hover{
+
+color:var(--secondary);
+
+padding-left:10px;
+
+}
+
+
+/* ===========================================
+   RESPONSIVE
+=========================================== */
+
+@media(max-width:1100px){
+
+.nav-links{
+
+gap:24px;
+
+}
+
+.visit-btn{
+
+padding:12px 18px;
+
+}
+
+}
+
+
+@media(max-width:900px){
+
+.nav-links{
+
+display:none;
+
+}
+
+.visit-btn{
+
+display:none;
+
+}
+
+.mobile-btn{
+
+display:flex;
+
+}
+
+.navbar{
+
+width:calc(100% - 30px);
+
+padding:0 20px;
+
+}
+
+}
+
+
+@media(max-width:600px){
+
+.navbar{
+
+height:72px;
+
+top:15px;
+
+}
+
+.logo-main{
+
+font-size:28px;
+
+}
+
+.logo-sub{
+
+font-size:8px;
+
+letter-spacing:3px;
+
+}
+
+.mobile-menu{
+
+top:82px;
+
+}
+
+}

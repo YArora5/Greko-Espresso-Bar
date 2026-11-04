@@ -1,0 +1,669 @@
+/*==================================================
+ LOADER - PART 1
+ LAYOUT + CONTENT
+==================================================*/
+
+.loader{
+
+    position:fixed;
+
+    inset:0;
+
+    z-index:9999;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:
+
+    linear-gradient(
+    180deg,
+    #f8f3ea 0%,
+    #efe2cf 100%
+    );
+
+}
+
+.loader::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+    radial-gradient(
+    circle at 30% 20%,
+    rgba(255,255,255,.55),
+    transparent 35%
+    ),
+
+    radial-gradient(
+    circle at 80% 80%,
+    rgba(108,75,50,.08),
+    transparent 35%
+    );
+
+    pointer-events:none;
+
+}
+
+.loader-content{
+
+    position:relative;
+
+    z-index:2;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-align:center;
+
+}
+
+.loader-icon{
+
+    width:120px;
+
+    height:120px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:#fff;
+
+    color:var(--secondary);
+
+    box-shadow:
+
+    0 20px 60px rgba(0,0,0,.12);
+
+}
+
+.loader-icon svg{
+
+    width:58px;
+
+    height:58px;
+
+}
+
+.loader h2{
+
+    margin-top:30px;
+
+    font-size:54px;
+
+    letter-spacing:4px;
+
+    color:var(--primary);
+
+}
+
+.loader p{
+
+    margin-top:12px;
+
+    color:#6b6056;
+
+    letter-spacing:2px;
+
+    font-size:1rem;
+
+}
+/*==================================================
+ LOADER - PART 2
+ PROGRESS BAR + GLOW
+==================================================*/
+
+.loader-bar{
+
+    position:relative;
+
+    width:260px;
+
+    height:8px;
+
+    margin-top:35px;
+
+    border-radius:999px;
+
+    overflow:hidden;
+
+    background:
+
+    rgba(108,75,50,.15);
+
+}
+
+.loader-progress{
+
+    position:absolute;
+
+    left:0;
+
+    top:0;
+
+    width:0;
+
+    height:100%;
+
+    border-radius:999px;
+
+    background:
+
+    linear-gradient(
+
+    90deg,
+
+    #a57c52,
+
+    #d8b184,
+
+    #6c4b32
+
+    );
+
+    box-shadow:
+
+    0 0 18px rgba(165,124,82,.45);
+
+}
+
+
+/*========================================
+ GLOW
+========================================*/
+
+.loader-icon::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:-12px;
+
+    border-radius:50%;
+
+    background:
+
+    radial-gradient(
+
+    rgba(255,255,255,.35),
+
+    transparent 70%
+
+    );
+
+    filter:blur(15px);
+
+    z-index:-1;
+
+}
+
+.loader-icon::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:170px;
+
+    height:170px;
+
+    border-radius:50%;
+
+    border:1px solid rgba(165,124,82,.15);
+
+    animation:loaderRotate 12s linear infinite;
+
+}
+
+
+/*========================================
+ FLOATING PARTICLES
+========================================*/
+
+.loader-particle{
+
+    position:absolute;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.45);
+
+    filter:blur(2px);
+
+    animation:loaderParticle 10s linear infinite;
+
+}
+
+.loader-particle.small{
+
+    width:6px;
+
+    height:6px;
+
+}
+
+.loader-particle.medium{
+
+    width:10px;
+
+    height:10px;
+
+}
+
+.loader-particle.large{
+
+    width:14px;
+
+    height:14px;
+
+}
+
+
+/*========================================
+ KEYFRAMES
+========================================*/
+
+@keyframes loaderRotate{
+
+    from{
+
+        transform:rotate(0deg);
+
+    }
+
+    to{
+
+        transform:rotate(360deg);
+
+    }
+
+}
+
+@keyframes loaderParticle{
+
+    0%{
+
+        opacity:0;
+
+        transform:translateY(0);
+
+    }
+
+    25%{
+
+        opacity:.8;
+
+    }
+
+    100%{
+
+        opacity:0;
+
+        transform:translateY(-140px);
+
+    }
+
+}
+/*==================================================
+ LOADER - PART 3
+ HOVER EFFECTS + ANIMATIONS
+==================================================*/
+
+.loader-content{
+
+    animation:loaderFloat 5s ease-in-out infinite;
+
+}
+
+.loader-icon{
+
+    transition:
+    transform .4s ease,
+    box-shadow .4s ease;
+
+}
+
+.loader-icon:hover{
+
+    transform:
+    scale(1.08)
+    rotate(-8deg);
+
+    box-shadow:
+    0 28px 70px rgba(0,0,0,.18);
+
+}
+
+
+/*========================================
+ TITLE
+========================================*/
+
+.loader h2{
+
+    animation:loaderPulse 2s ease-in-out infinite;
+
+}
+
+
+/*========================================
+ TEXT
+========================================*/
+
+.loader p{
+
+    animation:loaderFade 2s ease-in-out infinite;
+
+}
+
+
+/*========================================
+ PROGRESS BAR SHINE
+========================================*/
+
+.loader-progress{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.loader-progress::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+    linear-gradient(
+
+    120deg,
+
+    transparent,
+
+    rgba(255,255,255,.35),
+
+    transparent
+
+    );
+
+    transform:translateX(-120%);
+
+    animation:loaderShine 1.8s linear infinite;
+
+}
+
+
+/*========================================
+ KEYFRAMES
+========================================*/
+
+@keyframes loaderFloat{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-10px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+@keyframes loaderPulse{
+
+    0%{
+
+        opacity:.8;
+
+    }
+
+    50%{
+
+        opacity:1;
+
+        transform:scale(1.03);
+
+    }
+
+    100%{
+
+        opacity:.8;
+
+    }
+
+}
+
+@keyframes loaderFade{
+
+    0%{
+
+        opacity:.5;
+
+    }
+
+    50%{
+
+        opacity:1;
+
+    }
+
+    100%{
+
+        opacity:.5;
+
+    }
+
+}
+
+@keyframes loaderShine{
+
+    from{
+
+        transform:translateX(-120%);
+
+    }
+
+    to{
+
+        transform:translateX(120%);
+
+    }
+
+}
+/*==================================================
+ LOADER - PART 4
+ MOBILE RESPONSIVE + FINAL POLISH
+==================================================*/
+
+@media (max-width:640px){
+
+.loader-icon{
+
+width:90px;
+
+height:90px;
+
+}
+
+.loader-icon svg{
+
+width:42px;
+
+height:42px;
+
+}
+
+.loader h2{
+
+font-size:38px;
+
+letter-spacing:3px;
+
+margin-top:24px;
+
+}
+
+.loader p{
+
+font-size:.9rem;
+
+letter-spacing:1px;
+
+margin-top:10px;
+
+}
+
+.loader-bar{
+
+width:220px;
+
+margin-top:28px;
+
+}
+
+}
+
+
+/*========================================*/
+
+@media (max-width:420px){
+
+.loader-icon{
+
+width:78px;
+
+height:78px;
+
+}
+
+.loader-icon svg{
+
+width:36px;
+
+height:36px;
+
+}
+
+.loader h2{
+
+font-size:30px;
+
+letter-spacing:2px;
+
+}
+
+.loader p{
+
+font-size:.82rem;
+
+}
+
+.loader-bar{
+
+width:180px;
+
+height:6px;
+
+}
+
+.loader-particle{
+
+display:none;
+
+}
+
+}
+
+
+/*========================================
+ PERFORMANCE
+========================================*/
+
+.loader,
+.loader-content,
+.loader-icon,
+.loader-progress{
+
+will-change:
+
+transform,
+
+opacity;
+
+}
+
+
+/*========================================
+ SMOOTH RENDERING
+========================================*/
+
+.loader *,
+.loader *::before,
+.loader *::after{
+
+backface-visibility:hidden;
+
+transform-style:preserve-3d;
+
+-webkit-font-smoothing:antialiased;
+
+}
+
+
+/*========================================
+ FINAL TRANSITIONS
+========================================*/
+
+.loader h2,
+.loader p,
+.loader div,
+.loader svg{
+
+transition:.35s ease;
+
+}
+
+
+/*========================================
+ SECTION COMPLETE
+========================================*/
+
+.loader{
+
+isolation:isolate;
+
+}

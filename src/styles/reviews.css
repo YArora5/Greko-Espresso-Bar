@@ -1,0 +1,1371 @@
+/*==================================================
+ REVIEWS - PART 1
+ SECTION + HEADING
+==================================================*/
+
+.reviews{
+
+    position:relative;
+
+    width:100%;
+
+    overflow:hidden;
+
+    padding:140px 8%;
+
+    background:
+
+    linear-gradient(
+    180deg,
+    #faf6ef 0%,
+    #efe3d2 100%
+    );
+
+}
+
+.reviews::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+    radial-gradient(
+    circle at 20% 20%,
+    rgba(255,255,255,.55),
+    transparent 35%
+    ),
+
+    radial-gradient(
+    circle at 80% 75%,
+    rgba(108,75,50,.08),
+    transparent 35%
+    );
+
+    pointer-events:none;
+
+}
+
+.reviews-container{
+
+    position:relative;
+
+    z-index:2;
+
+    width:100%;
+
+    max-width:1450px;
+
+    margin:auto;
+
+}
+
+.reviews-heading{
+
+    position:relative;
+
+    text-align:center;
+
+    max-width:760px;
+
+    margin:0 auto 80px;
+
+}
+
+.reviews-tag{
+
+    display:inline-block;
+
+    margin-bottom:18px;
+
+    color:var(--secondary);
+
+    text-transform:uppercase;
+
+    letter-spacing:6px;
+
+    font-size:.82rem;
+
+    font-weight:600;
+
+}
+
+.reviews-heading h2{
+
+    font-size:clamp(56px,6vw,88px);
+
+    line-height:1;
+
+    color:var(--primary);
+
+    margin-bottom:24px;
+
+}
+
+.reviews-heading p{
+
+    max-width:620px;
+
+    margin:auto;
+
+    color:#6b6056;
+
+    line-height:2;
+
+    font-size:1.05rem;
+
+}
+
+
+/*========================================
+ GLOW
+========================================*/
+
+.reviews-heading::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:260px;
+
+    height:260px;
+
+    left:50%;
+
+    top:-60px;
+
+    transform:translateX(-50%);
+
+    border-radius:50%;
+
+    background:
+
+    radial-gradient(
+
+    rgba(255,255,255,.30),
+
+    transparent 70%
+
+    );
+
+    filter:blur(45px);
+
+    animation:reviewsGlow 8s ease-in-out infinite;
+
+    z-index:-1;
+
+}
+
+@keyframes reviewsGlow{
+
+    0%{
+
+        transform:
+        translateX(-50%)
+        scale(.9);
+
+        opacity:.3;
+
+    }
+
+    50%{
+
+        transform:
+        translateX(-50%)
+        scale(1.12);
+
+        opacity:.65;
+
+    }
+
+    100%{
+
+        transform:
+        translateX(-50%)
+        scale(.9);
+
+        opacity:.3;
+
+    }
+
+}
+/*==================================================
+ REVIEWS - PART 2
+ REVIEWS GRID + REVIEW CARDS
+==================================================*/
+
+.reviews-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:30px;
+
+    align-items:stretch;
+
+}
+
+.review-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+    border-radius:30px;
+
+    padding:35px;
+
+    background:rgba(255,255,255,.72);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.35);
+
+    box-shadow:
+
+    0 20px 50px rgba(0,0,0,.08);
+
+    transition:.45s ease;
+
+}
+
+.review-card:hover{
+
+    transform:
+
+    translateY(-12px);
+
+    box-shadow:
+
+    0 40px 80px rgba(0,0,0,.15);
+
+}
+
+.review-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+    linear-gradient(
+
+    180deg,
+
+    rgba(255,255,255,.10),
+
+    transparent,
+
+    rgba(0,0,0,.04)
+
+    );
+
+}
+
+.review-card::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:260px;
+
+    height:260px;
+
+    border-radius:50%;
+
+    background:
+
+    radial-gradient(
+
+    rgba(255,255,255,.25),
+
+    transparent 70%
+
+    );
+
+    top:-120px;
+
+    right:-120px;
+
+}
+
+
+/*========================================
+ REVIEW TEXT
+========================================*/
+
+.review-text{
+
+    color:#6b6056;
+
+    font-size:1rem;
+
+    line-height:2;
+
+    margin:28px 0 36px;
+
+}
+
+
+/*========================================
+ USER
+========================================*/
+
+.review-user{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:16px;
+
+}
+
+.avatar{
+
+    width:58px;
+
+    height:58px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:var(--secondary);
+
+    color:#fff;
+
+    font-size:22px;
+
+    font-weight:700;
+
+    box-shadow:
+
+    0 12px 25px rgba(0,0,0,.15);
+
+}
+
+.review-user h4{
+
+    font-size:22px;
+
+    color:var(--primary);
+
+    margin-bottom:4px;
+
+}
+
+.review-user span{
+
+    color:#8b7b6f;
+
+    font-size:.9rem;
+
+}
+/*==================================================
+ REVIEWS - PART 3
+ QUOTE ICON + STARS + DECORATIVE ELEMENTS
+==================================================*/
+
+.quote-icon{
+
+    color:var(--secondary);
+
+    margin-bottom:22px;
+
+    opacity:.9;
+
+    transition:.35s ease;
+
+}
+
+.review-card:hover .quote-icon{
+
+    transform:
+
+    rotate(-10deg)
+
+    scale(1.12);
+
+}
+
+
+/*========================================
+ STARS
+========================================*/
+
+.stars{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:6px;
+
+    color:#f5b301;
+
+    margin-bottom:18px;
+
+}
+
+.stars svg{
+
+    fill:currentColor;
+
+    transition:.35s ease;
+
+}
+
+.review-card:hover .stars svg{
+
+    transform:
+
+    scale(1.15)
+
+    rotate(-8deg);
+
+}
+
+
+/*========================================
+ FLOATING COFFEE BEANS
+========================================*/
+
+.review-bean{
+
+    position:absolute;
+
+    width:24px;
+
+    height:34px;
+
+    border-radius:50%;
+
+    background:
+
+    linear-gradient(
+
+    145deg,
+
+    #8b5b39,
+
+    #59331f
+
+    );
+
+    box-shadow:
+
+    inset -2px -2px 4px rgba(0,0,0,.18),
+
+    inset 2px 2px 3px rgba(255,255,255,.08),
+
+    0 8px 18px rgba(0,0,0,.16);
+
+    animation:reviewBean 7s ease-in-out infinite;
+
+}
+
+.review-bean::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:50%;
+
+    top:10%;
+
+    transform:translateX(-50%);
+
+    width:2px;
+
+    height:80%;
+
+    border-radius:999px;
+
+    background:#d7b185;
+
+}
+
+.bean-a{
+
+    top:25px;
+
+    right:25px;
+
+}
+
+.bean-b{
+
+    bottom:35px;
+
+    left:28px;
+
+    animation-delay:2s;
+
+}
+
+
+/*========================================
+ DECORATIVE RINGS
+========================================*/
+
+.review-ring{
+
+    position:absolute;
+
+    border-radius:50%;
+
+    border:1px solid rgba(108,75,50,.08);
+
+    animation:reviewRotate 20s linear infinite;
+
+}
+
+.review-ring.one{
+
+    width:170px;
+
+    height:170px;
+
+    top:-70px;
+
+    right:-60px;
+
+}
+
+.review-ring.two{
+
+    width:240px;
+
+    height:240px;
+
+    bottom:-100px;
+
+    left:-90px;
+
+    animation-direction:reverse;
+
+}
+
+
+/*========================================
+ FLOATING PARTICLES
+========================================*/
+
+.review-particle{
+
+    position:absolute;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.35);
+
+    filter:blur(2px);
+
+    animation:reviewParticle 10s linear infinite;
+
+}
+
+.review-particle.small{
+
+    width:6px;
+
+    height:6px;
+
+}
+
+.review-particle.medium{
+
+    width:10px;
+
+    height:10px;
+
+}
+
+.review-particle.large{
+
+    width:14px;
+
+    height:14px;
+
+}
+
+
+/*========================================
+ KEYFRAMES
+========================================*/
+
+@keyframes reviewBean{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:
+        translateY(-12px)
+        rotate(8deg);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+@keyframes reviewRotate{
+
+    from{
+
+        transform:rotate(0deg);
+
+    }
+
+    to{
+
+        transform:rotate(360deg);
+
+    }
+
+}
+
+@keyframes reviewParticle{
+
+    0%{
+
+        opacity:0;
+
+        transform:translateY(0);
+
+    }
+
+    25%{
+
+        opacity:.8;
+
+    }
+
+    100%{
+
+        opacity:0;
+
+        transform:translateY(-120px);
+
+    }
+
+}
+/*==================================================
+ REVIEWS - PART 4
+ HOVER EFFECTS + GLASS + ANIMATIONS
+==================================================*/
+
+.review-card{
+
+    cursor:pointer;
+
+    transition:
+    transform .45s ease,
+    box-shadow .45s ease,
+    background .45s ease;
+
+}
+
+.review-card:hover{
+
+    transform:
+    translateY(-15px)
+    scale(1.02);
+
+    box-shadow:
+    0 45px 90px rgba(0,0,0,.18);
+
+    background:rgba(255,255,255,.88);
+
+}
+
+
+/*========================================
+ QUOTE ICON
+========================================*/
+
+.quote-icon{
+
+    transition:.4s ease;
+
+}
+
+.review-card:hover .quote-icon{
+
+    color:var(--primary);
+
+    transform:
+    rotate(-12deg)
+    scale(1.18);
+
+}
+
+
+/*========================================
+ STARS
+========================================*/
+
+.stars svg{
+
+    transition:.35s ease;
+
+}
+
+.review-card:hover .stars svg{
+
+    color:#ffc107;
+
+    transform:
+    translateY(-3px)
+    scale(1.15);
+
+}
+
+
+/*========================================
+ AVATAR
+========================================*/
+
+.avatar{
+
+    transition:.4s ease;
+
+}
+
+.review-card:hover .avatar{
+
+    background:var(--primary);
+
+    transform:
+    rotate(-8deg)
+    scale(1.08);
+
+}
+
+
+/*========================================
+ USER NAME
+========================================*/
+
+.review-user h4{
+
+    transition:.35s ease;
+
+}
+
+.review-card:hover .review-user h4{
+
+    color:var(--secondary);
+
+}
+
+
+/*========================================
+ REVIEW TEXT
+========================================*/
+
+.review-text{
+
+    transition:.35s ease;
+
+}
+
+.review-card:hover .review-text{
+
+    color:#5d544c;
+
+}
+
+
+/*========================================
+ SHINE EFFECT
+========================================*/
+
+.review-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+    linear-gradient(
+
+    120deg,
+
+    transparent,
+
+    rgba(255,255,255,.22),
+
+    transparent
+
+    );
+
+    transform:translateX(-120%);
+
+    transition:1.1s;
+
+}
+
+.review-card:hover::before{
+
+    transform:translateX(120%);
+
+}
+
+
+/*========================================
+ FLOATING CARD
+========================================*/
+
+.review-card{
+
+    animation:reviewFloat 6s ease-in-out infinite;
+
+}
+
+@keyframes reviewFloat{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-8px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+/*==================================================
+ REVIEWS - PART 5
+ TABLET RESPONSIVE
+==================================================*/
+
+@media (max-width:1200px){
+
+.reviews{
+
+padding:120px 6%;
+
+}
+
+.reviews-heading{
+
+margin-bottom:70px;
+
+}
+
+.reviews-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+gap:28px;
+
+}
+
+.reviews-heading h2{
+
+font-size:clamp(48px,5vw,72px);
+
+}
+
+.reviews-heading p{
+
+font-size:1rem;
+
+}
+
+.review-card{
+
+padding:30px;
+
+}
+
+.review-user h4{
+
+font-size:20px;
+
+}
+
+.review-text{
+
+font-size:.95rem;
+
+}
+
+.avatar{
+
+width:54px;
+
+height:54px;
+
+font-size:20px;
+
+}
+
+}
+
+
+/*========================================*/
+
+@media (max-width:992px){
+
+.reviews{
+
+padding:100px 35px;
+
+}
+
+.reviews-heading{
+
+margin-bottom:60px;
+
+}
+
+.reviews-grid{
+
+grid-template-columns:1fr;
+
+max-width:650px;
+
+margin:auto;
+
+gap:30px;
+
+}
+
+.reviews-heading h2{
+
+font-size:56px;
+
+}
+
+.reviews-heading p{
+
+max-width:600px;
+
+}
+
+.review-card{
+
+padding:32px;
+
+}
+
+.review-user{
+
+justify-content:center;
+
+}
+
+.review-text{
+
+text-align:center;
+
+}
+
+.quote-icon{
+
+display:block;
+
+margin:0 auto 20px;
+
+}
+
+.stars{
+
+justify-content:center;
+
+}
+
+}
+
+
+/*========================================*/
+
+@media (max-width:768px){
+
+.reviews{
+
+padding:90px 28px;
+
+}
+
+.reviews-heading h2{
+
+font-size:46px;
+
+}
+
+.reviews-heading p{
+
+font-size:.95rem;
+
+line-height:1.9;
+
+}
+
+.review-card{
+
+padding:26px;
+
+}
+
+.review-user{
+
+gap:14px;
+
+}
+
+.review-user h4{
+
+font-size:18px;
+
+}
+
+.review-user span{
+
+font-size:.82rem;
+
+}
+
+.review-text{
+
+font-size:.9rem;
+
+line-height:1.8;
+
+}
+
+.avatar{
+
+width:50px;
+
+height:50px;
+
+font-size:18px;
+
+}
+
+.quote-icon{
+
+width:34px;
+
+height:34px;
+
+}
+
+}
+/*==================================================
+ REVIEWS - PART 6
+ MOBILE RESPONSIVE + FINAL POLISH
+==================================================*/
+
+@media (max-width:640px){
+
+.reviews{
+
+padding:80px 22px;
+
+}
+
+.reviews-heading{
+
+margin-bottom:45px;
+
+}
+
+.reviews-tag{
+
+font-size:.72rem;
+
+letter-spacing:4px;
+
+}
+
+.reviews-heading h2{
+
+font-size:38px;
+
+line-height:1.08;
+
+}
+
+.reviews-heading p{
+
+font-size:.9rem;
+
+line-height:1.8;
+
+}
+
+.reviews-grid{
+
+grid-template-columns:1fr;
+
+gap:20px;
+
+}
+
+.review-card{
+
+padding:22px;
+
+border-radius:24px;
+
+}
+
+.quote-icon{
+
+width:30px;
+
+height:30px;
+
+margin:0 auto 18px;
+
+}
+
+.stars{
+
+justify-content:center;
+
+margin-bottom:18px;
+
+}
+
+.stars svg{
+
+width:16px;
+
+height:16px;
+
+}
+
+.review-text{
+
+font-size:.86rem;
+
+line-height:1.75;
+
+text-align:center;
+
+margin-bottom:24px;
+
+}
+
+.review-user{
+
+justify-content:center;
+
+text-align:left;
+
+gap:12px;
+
+}
+
+.avatar{
+
+width:46px;
+
+height:46px;
+
+font-size:16px;
+
+}
+
+.review-user h4{
+
+font-size:17px;
+
+}
+
+.review-user span{
+
+font-size:.78rem;
+
+}
+
+.review-bean,
+
+.review-ring{
+
+display:none;
+
+}
+
+}
+
+
+/*========================================*/
+
+@media (max-width:420px){
+
+.reviews{
+
+padding:70px 18px;
+
+}
+
+.reviews-heading h2{
+
+font-size:32px;
+
+}
+
+.reviews-heading p{
+
+font-size:.82rem;
+
+}
+
+.review-card{
+
+padding:18px;
+
+}
+
+.quote-icon{
+
+width:26px;
+
+height:26px;
+
+}
+
+.stars svg{
+
+width:14px;
+
+height:14px;
+
+}
+
+.review-text{
+
+font-size:.8rem;
+
+}
+
+.avatar{
+
+width:42px;
+
+height:42px;
+
+font-size:15px;
+
+}
+
+.review-user h4{
+
+font-size:16px;
+
+}
+
+.review-user span{
+
+font-size:.72rem;
+
+}
+
+.review-particle{
+
+display:none;
+
+}
+
+}
+
+
+/*========================================
+ PERFORMANCE
+========================================*/
+
+.review-card,
+.avatar,
+.quote-icon,
+.stars svg,
+.review-bean{
+
+will-change:transform,opacity;
+
+}
+
+
+/*========================================
+ SMOOTH RENDERING
+========================================*/
+
+.reviews *,
+.reviews *::before,
+.reviews *::after{
+
+backface-visibility:hidden;
+
+transform-style:preserve-3d;
+
+-webkit-font-smoothing:antialiased;
+
+}
+
+
+/*========================================
+ FINAL TRANSITIONS
+========================================*/
+
+.reviews h2,
+.reviews h4,
+.reviews p,
+.reviews span,
+.reviews div,
+.reviews svg{
+
+transition:.35s ease;
+
+}
+
+
+/*========================================
+ SECTION COMPLETE
+========================================*/
+
+.reviews{
+
+isolation:isolate;
+
+}

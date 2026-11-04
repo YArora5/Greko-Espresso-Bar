@@ -1,0 +1,1813 @@
+/*==================================================
+ MENU SECTION - PART 1
+ LAYOUT + HEADING
+==================================================*/
+
+.menu-section{
+
+    position:relative;
+
+    width:100%;
+
+    overflow:hidden;
+
+    padding:140px 8%;
+
+    background:
+    linear-gradient(
+    180deg,
+    #f8f4ed 0%,
+    #efe2cf 100%);
+
+}
+
+.menu-section::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+    radial-gradient(
+    circle at 20% 20%,
+    rgba(255,255,255,.55),
+    transparent 35%),
+
+    radial-gradient(
+    circle at 80% 75%,
+    rgba(108,75,50,.08),
+    transparent 35%);
+
+    pointer-events:none;
+
+}
+
+.menu-container{
+
+    position:relative;
+
+    z-index:2;
+
+    width:100%;
+
+    max-width:1450px;
+
+    margin:auto;
+
+}
+
+.menu-heading{
+
+    text-align:center;
+
+    max-width:760px;
+
+    margin:0 auto 80px;
+
+}
+
+.menu-tag{
+
+    display:inline-block;
+
+    margin-bottom:18px;
+
+    color:var(--secondary);
+
+    text-transform:uppercase;
+
+    letter-spacing:6px;
+
+    font-size:.82rem;
+
+    font-weight:600;
+
+}
+
+.menu-heading h2{
+
+    font-size:clamp(56px,6vw,88px);
+
+    line-height:1;
+
+    color:var(--primary);
+
+    margin-bottom:24px;
+
+}
+
+.menu-heading p{
+
+    max-width:620px;
+
+    margin:auto;
+
+    color:#6b6056;
+
+    line-height:2;
+
+    font-size:1.05rem;
+
+}
+
+/* Glow */
+
+.menu-heading::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:260px;
+
+    height:260px;
+
+    left:50%;
+
+    top:-60px;
+
+    transform:translateX(-50%);
+
+    border-radius:50%;
+
+    background:
+
+    radial-gradient(
+
+    rgba(255,255,255,.3),
+
+    transparent 70%
+
+    );
+
+    filter:blur(45px);
+
+    animation:menuGlow 8s ease-in-out infinite;
+
+    z-index:-1;
+
+}
+
+@keyframes menuGlow{
+
+    0%{
+
+        transform:
+        translateX(-50%)
+        scale(.9);
+
+        opacity:.3;
+
+    }
+
+    50%{
+
+        transform:
+        translateX(-50%)
+        scale(1.12);
+
+        opacity:.65;
+
+    }
+
+    100%{
+
+        transform:
+        translateX(-50%)
+        scale(.9);
+
+        opacity:.3;
+
+    }
+
+}
+/*==================================================
+MENU SECTION - PART 2
+CATEGORY TABS
+==================================================*/
+
+.menu-tabs{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    flex-wrap:wrap;
+
+    gap:18px;
+
+    margin-bottom:70px;
+
+}
+
+.menu-tabs button{
+
+    position:relative;
+
+    overflow:hidden;
+
+    padding:16px 28px;
+
+    border:none;
+
+    outline:none;
+
+    cursor:pointer;
+
+    border-radius:999px;
+
+    background:#ffffff;
+
+    color:var(--primary);
+
+    font-size:.92rem;
+
+    font-weight:600;
+
+    letter-spacing:1px;
+
+    transition:.35s ease;
+
+    box-shadow:
+
+    0 15px 35px rgba(0,0,0,.08);
+
+}
+
+.menu-tabs button::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+    linear-gradient(
+
+    120deg,
+
+    transparent,
+
+    rgba(255,255,255,.35),
+
+    transparent
+
+    );
+
+    transform:translateX(-120%);
+
+    transition:1s;
+
+}
+
+.menu-tabs button:hover::before{
+
+    transform:translateX(120%);
+
+}
+
+.menu-tabs button:hover{
+
+    transform:
+
+    translateY(-6px);
+
+    background:#ece3d6;
+
+}
+
+.menu-tabs button.active{
+
+    background:var(--secondary);
+
+    color:#fff;
+
+    box-shadow:
+
+    0 18px 40px rgba(0,0,0,.18);
+
+}
+
+.menu-tabs button.active:hover{
+
+    background:var(--primary);
+
+}
+
+
+/*========================================
+BOTTOM INDICATOR
+========================================*/
+
+.menu-tabs::after{
+
+    content:"";
+
+    display:block;
+
+    width:180px;
+
+    height:2px;
+
+    margin-top:20px;
+
+    background:
+
+    linear-gradient(
+
+    90deg,
+
+    transparent,
+
+    rgba(108,75,50,.25),
+
+    transparent
+
+    );
+
+}
+/*==================================================
+ MENU SECTION - PART 3
+ MENU GRID + MENU CARDS
+==================================================*/
+
+.menu-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:30px;
+
+    align-items:stretch;
+
+}
+
+.menu-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+    border-radius:30px;
+
+    padding:30px;
+
+    background:rgba(255,255,255,.72);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.35);
+
+    box-shadow:
+
+    0 20px 50px rgba(0,0,0,.08);
+
+    transition:.45s ease;
+
+}
+
+.menu-card:hover{
+
+    transform:
+
+    translateY(-12px);
+
+    box-shadow:
+
+    0 40px 80px rgba(0,0,0,.15);
+
+}
+
+.menu-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+    linear-gradient(
+
+    180deg,
+
+    rgba(255,255,255,.10),
+
+    transparent,
+
+    rgba(0,0,0,.03)
+
+    );
+
+}
+
+.menu-card::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:260px;
+
+    height:260px;
+
+    border-radius:50%;
+
+    background:
+
+    radial-gradient(
+
+    rgba(255,255,255,.25),
+
+    transparent 70%
+
+    );
+
+    top:-120px;
+
+    right:-120px;
+
+}
+
+
+/*========================================
+ TOP
+========================================*/
+
+.menu-card-top{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:24px;
+
+}
+
+.menu-icon{
+
+    width:64px;
+
+    height:64px;
+
+    border-radius:18px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:var(--secondary);
+
+    color:#fff;
+
+    box-shadow:
+
+    0 12px 25px rgba(0,0,0,.15);
+
+}
+
+.menu-icon svg{
+
+    width:26px;
+
+    height:26px;
+
+}
+
+.menu-card-top span{
+
+    padding:8px 16px;
+
+    border-radius:999px;
+
+    background:#f5efe6;
+
+    color:var(--secondary);
+
+    font-size:.72rem;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+
+    font-weight:600;
+
+}
+
+
+/*========================================
+ TEXT
+========================================*/
+
+.menu-card h3{
+
+    font-size:34px;
+
+    color:var(--primary);
+
+    margin-bottom:14px;
+
+    line-height:1.1;
+
+}
+
+.menu-card p{
+
+    color:#6b6056;
+
+    line-height:1.8;
+
+    margin-bottom:28px;
+
+}
+/*==================================================
+ MENU SECTION - PART 4
+ PRICE + BUTTON + BADGES
+==================================================*/
+
+.menu-bottom{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:15px;
+
+    margin-top:auto;
+
+}
+
+.menu-bottom strong{
+
+    font-size:30px;
+
+    font-family:"Cormorant Garamond",serif;
+
+    color:var(--primary);
+
+    transition:.35s ease;
+
+}
+
+.menu-bottom button{
+
+    position:relative;
+
+    overflow:hidden;
+
+    border:none;
+
+    outline:none;
+
+    cursor:pointer;
+
+    padding:14px 22px;
+
+    border-radius:999px;
+
+    background:var(--secondary);
+
+    color:#fff;
+
+    font-size:.88rem;
+
+    font-weight:600;
+
+    letter-spacing:1px;
+
+    transition:.35s ease;
+
+}
+
+.menu-bottom button::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+    linear-gradient(
+
+    120deg,
+
+    transparent,
+
+    rgba(255,255,255,.30),
+
+    transparent
+
+    );
+
+    transform:translateX(-120%);
+
+    transition:1s;
+
+}
+
+.menu-bottom button:hover::before{
+
+    transform:translateX(120%);
+
+}
+
+.menu-bottom button:hover{
+
+    background:var(--primary);
+
+    transform:
+
+    translateY(-4px);
+
+}
+
+
+/*========================================
+ FOOD TYPE BADGE
+========================================*/
+
+.food-badge{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    padding:8px 14px;
+
+    border-radius:999px;
+
+    font-size:.72rem;
+
+    font-weight:600;
+
+    letter-spacing:1px;
+
+    text-transform:uppercase;
+
+    margin-top:15px;
+
+}
+
+.food-badge.veg{
+
+    background:#e8f8e8;
+
+    color:#2e7d32;
+
+}
+
+.food-badge.nonveg{
+
+    background:#fde9e6;
+
+    color:#b42318;
+
+}
+
+.food-badge.special{
+
+    background:#fff3d6;
+
+    color:#b7791f;
+
+}
+
+
+/*========================================
+ AVAILABILITY BADGE
+========================================*/
+
+.item-status{
+
+    position:absolute;
+
+    top:22px;
+
+    left:22px;
+
+    padding:6px 12px;
+
+    border-radius:999px;
+
+    font-size:.68rem;
+
+    font-weight:600;
+
+    letter-spacing:1px;
+
+    text-transform:uppercase;
+
+}
+
+.item-status.available{
+
+    background:#dff7e5;
+
+    color:#238636;
+
+}
+
+.item-status.popular{
+
+    background:#fff4d6;
+
+    color:#b7791f;
+
+}
+
+.item-status.new{
+
+    background:#e8f0ff;
+
+    color:#2563eb;
+
+}
+/*==================================================
+ MENU SECTION - PART 5
+ HOVER EFFECTS + GLASS + ANIMATIONS
+==================================================*/
+
+.menu-card{
+
+    cursor:pointer;
+
+    transition:
+    transform .45s ease,
+    box-shadow .45s ease,
+    background .45s ease;
+
+}
+
+.menu-card:hover{
+
+    transform:
+    translateY(-16px)
+    scale(1.02);
+
+    box-shadow:
+    0 45px 90px rgba(0,0,0,.18);
+
+    background:rgba(255,255,255,.88);
+
+}
+
+
+/*========================================
+ ICON
+========================================*/
+
+.menu-icon{
+
+    transition:.4s ease;
+
+}
+
+.menu-card:hover .menu-icon{
+
+    transform:
+    rotate(-10deg)
+    scale(1.12);
+
+    background:var(--primary);
+
+}
+
+
+/*========================================
+ CATEGORY BADGE
+========================================*/
+
+.menu-card-top span{
+
+    transition:.35s ease;
+
+}
+
+.menu-card:hover .menu-card-top span{
+
+    background:var(--secondary);
+
+    color:#fff;
+
+}
+
+
+/*========================================
+ TITLE
+========================================*/
+
+.menu-card h3{
+
+    transition:.35s ease;
+
+}
+
+.menu-card:hover h3{
+
+    color:var(--secondary);
+
+}
+
+
+/*========================================
+ DESCRIPTION
+========================================*/
+
+.menu-card p{
+
+    transition:.35s ease;
+
+}
+
+.menu-card:hover p{
+
+    color:#5d544c;
+
+}
+
+
+/*========================================
+ PRICE
+========================================*/
+
+.menu-bottom strong{
+
+    transition:.35s ease;
+
+}
+
+.menu-card:hover .menu-bottom strong{
+
+    color:var(--secondary);
+
+    transform:scale(1.08);
+
+}
+
+
+/*========================================
+ BUTTON
+========================================*/
+
+.menu-bottom button{
+
+    transition:.35s ease;
+
+}
+
+.menu-bottom button:hover{
+
+    transform:
+    translateY(-4px)
+    scale(1.04);
+
+}
+
+
+/*========================================
+ SHINE EFFECT
+========================================*/
+
+.menu-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+    linear-gradient(
+
+    120deg,
+
+    transparent,
+
+    rgba(255,255,255,.22),
+
+    transparent
+
+    );
+
+    transform:translateX(-120%);
+
+    transition:1.1s;
+
+}
+
+.menu-card:hover::before{
+
+    transform:translateX(120%);
+
+}
+
+
+/*========================================
+ FLOATING CARD
+========================================*/
+
+.menu-card{
+
+    animation:menuCardFloat 6s ease-in-out infinite;
+
+}
+
+@keyframes menuCardFloat{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-8px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+/*==================================================
+ MENU SECTION - PART 6
+ FLOATING DECORATIONS + BACKGROUND
+==================================================*/
+
+.menu-decoration{
+
+    position:absolute;
+
+    inset:0;
+
+    pointer-events:none;
+
+    overflow:hidden;
+
+}
+
+
+/*========================================
+ FLOATING COFFEE BEANS
+========================================*/
+
+.menu-bean{
+
+    position:absolute;
+
+    width:24px;
+
+    height:34px;
+
+    border-radius:50%;
+
+    background:
+
+    linear-gradient(
+
+    145deg,
+
+    #8b5b39,
+
+    #59331f
+
+    );
+
+    box-shadow:
+
+    inset -2px -2px 4px rgba(0,0,0,.18),
+
+    inset 2px 2px 3px rgba(255,255,255,.08),
+
+    0 8px 18px rgba(0,0,0,.16);
+
+    animation:menuBeanFloat 7s ease-in-out infinite;
+
+}
+
+.menu-bean::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:50%;
+
+    top:10%;
+
+    transform:translateX(-50%);
+
+    width:2px;
+
+    height:80%;
+
+    background:#d7b185;
+
+    border-radius:999px;
+
+}
+
+.bean-1{
+
+    top:12%;
+
+    left:6%;
+
+}
+
+.bean-2{
+
+    top:28%;
+
+    right:8%;
+
+    animation-delay:1.8s;
+
+}
+
+.bean-3{
+
+    bottom:20%;
+
+    left:10%;
+
+    animation-delay:3.5s;
+
+}
+
+.bean-4{
+
+    bottom:10%;
+
+    right:12%;
+
+    animation-delay:5s;
+
+}
+
+
+/*========================================
+ FLOATING PARTICLES
+========================================*/
+
+.menu-particle{
+
+    position:absolute;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.35);
+
+    filter:blur(2px);
+
+    animation:menuParticle 12s linear infinite;
+
+}
+
+.menu-particle.small{
+
+    width:6px;
+
+    height:6px;
+
+}
+
+.menu-particle.medium{
+
+    width:10px;
+
+    height:10px;
+
+}
+
+.menu-particle.large{
+
+    width:14px;
+
+    height:14px;
+
+}
+
+
+/*========================================
+ DECORATIVE RINGS
+========================================*/
+
+.menu-ring{
+
+    position:absolute;
+
+    border-radius:50%;
+
+    border:1px solid rgba(108,75,50,.08);
+
+    animation:menuRotate 24s linear infinite;
+
+}
+
+.menu-ring.one{
+
+    width:280px;
+
+    height:280px;
+
+    top:-120px;
+
+    left:-100px;
+
+}
+
+.menu-ring.two{
+
+    width:360px;
+
+    height:360px;
+
+    bottom:-160px;
+
+    right:-120px;
+
+    animation-direction:reverse;
+
+}
+
+
+/*========================================
+ KEYFRAMES
+========================================*/
+
+@keyframes menuBeanFloat{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:
+        translateY(-14px)
+        rotate(8deg);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+@keyframes menuParticle{
+
+    0%{
+
+        opacity:0;
+
+        transform:translateY(0);
+
+    }
+
+    25%{
+
+        opacity:.85;
+
+    }
+
+    100%{
+
+        opacity:0;
+
+        transform:translateY(-140px);
+
+    }
+
+}
+
+@keyframes menuRotate{
+
+    from{
+
+        transform:rotate(0deg);
+
+    }
+
+    to{
+
+        transform:rotate(360deg);
+
+    }
+
+}
+/*==================================================
+ MENU SECTION - PART 7
+ TABLET RESPONSIVE
+==================================================*/
+
+@media (max-width:1200px){
+
+.menu-section{
+
+padding:120px 6%;
+
+}
+
+.menu-heading{
+
+margin-bottom:70px;
+
+}
+
+.menu-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+gap:28px;
+
+}
+
+.menu-heading h2{
+
+font-size:clamp(48px,5vw,72px);
+
+}
+
+.menu-heading p{
+
+font-size:1rem;
+
+}
+
+.menu-card{
+
+padding:28px;
+
+}
+
+.menu-card h3{
+
+font-size:30px;
+
+}
+
+.menu-icon{
+
+width:58px;
+
+height:58px;
+
+}
+
+.menu-icon svg{
+
+width:24px;
+
+height:24px;
+
+}
+
+.menu-bottom strong{
+
+font-size:28px;
+
+}
+
+}
+
+
+/*========================================*/
+
+@media (max-width:992px){
+
+.menu-section{
+
+padding:100px 35px;
+
+}
+
+.menu-heading{
+
+margin-bottom:60px;
+
+}
+
+.menu-grid{
+
+grid-template-columns:1fr;
+
+max-width:650px;
+
+margin:auto;
+
+gap:30px;
+
+}
+
+.menu-heading h2{
+
+font-size:56px;
+
+}
+
+.menu-heading p{
+
+max-width:600px;
+
+}
+
+.menu-tabs{
+
+gap:14px;
+
+margin-bottom:50px;
+
+}
+
+.menu-tabs button{
+
+padding:14px 22px;
+
+font-size:.85rem;
+
+}
+
+.menu-card{
+
+text-align:center;
+
+}
+
+.menu-card-top{
+
+justify-content:center;
+
+gap:18px;
+
+}
+
+.menu-icon{
+
+margin:0;
+
+}
+
+.menu-bottom{
+
+justify-content:center;
+
+gap:22px;
+
+}
+
+.menu-bottom button{
+
+padding:14px 24px;
+
+}
+
+.menu-card p{
+
+max-width:520px;
+
+margin-inline:auto;
+
+margin-bottom:26px;
+
+}
+
+}
+
+
+/*========================================*/
+
+@media (max-width:768px){
+
+.menu-section{
+
+padding:90px 28px;
+
+}
+
+.menu-heading h2{
+
+font-size:46px;
+
+}
+
+.menu-heading p{
+
+font-size:.95rem;
+
+line-height:1.9;
+
+}
+
+.menu-tabs{
+
+gap:12px;
+
+}
+
+.menu-tabs button{
+
+padding:13px 20px;
+
+font-size:.82rem;
+
+}
+
+.menu-card{
+
+padding:24px;
+
+}
+
+.menu-card h3{
+
+font-size:28px;
+
+}
+
+.menu-card p{
+
+font-size:.9rem;
+
+line-height:1.8;
+
+}
+
+.menu-icon{
+
+width:54px;
+
+height:54px;
+
+}
+
+.menu-icon svg{
+
+width:22px;
+
+height:22px;
+
+}
+
+.menu-bottom strong{
+
+font-size:26px;
+
+}
+
+}
+/*==================================================
+ MENU SECTION - PART 8
+ MOBILE RESPONSIVE + FINAL POLISH
+==================================================*/
+
+@media (max-width:640px){
+
+.menu-section{
+
+padding:80px 22px;
+
+}
+
+.menu-heading{
+
+margin-bottom:45px;
+
+}
+
+.menu-tag{
+
+font-size:.72rem;
+
+letter-spacing:4px;
+
+}
+
+.menu-heading h2{
+
+font-size:38px;
+
+line-height:1.08;
+
+}
+
+.menu-heading p{
+
+font-size:.9rem;
+
+line-height:1.8;
+
+}
+
+.menu-tabs{
+
+gap:10px;
+
+margin-bottom:40px;
+
+}
+
+.menu-tabs button{
+
+padding:12px 18px;
+
+font-size:.78rem;
+
+width:calc(50% - 5px);
+
+}
+
+.menu-grid{
+
+grid-template-columns:1fr;
+
+gap:22px;
+
+}
+
+.menu-card{
+
+padding:20px;
+
+border-radius:24px;
+
+}
+
+.menu-card-top{
+
+justify-content:center;
+
+gap:14px;
+
+margin-bottom:18px;
+
+}
+
+.menu-icon{
+
+width:56px;
+
+height:56px;
+
+}
+
+.menu-icon svg{
+
+width:22px;
+
+height:22px;
+
+}
+
+.menu-card-top span{
+
+font-size:.65rem;
+
+padding:7px 14px;
+
+}
+
+.menu-card h3{
+
+font-size:24px;
+
+text-align:center;
+
+margin-bottom:12px;
+
+}
+
+.menu-card p{
+
+font-size:.86rem;
+
+line-height:1.7;
+
+text-align:center;
+
+margin-bottom:22px;
+
+}
+
+.menu-bottom{
+
+flex-direction:column;
+
+gap:14px;
+
+}
+
+.menu-bottom strong{
+
+font-size:28px;
+
+}
+
+.menu-bottom button{
+
+width:100%;
+
+justify-content:center;
+
+padding:15px;
+
+}
+
+.food-badge{
+
+justify-content:center;
+
+margin-inline:auto;
+
+}
+
+.item-status{
+
+left:16px;
+
+top:16px;
+
+}
+
+.menu-bean,
+
+.menu-ring{
+
+display:none;
+
+}
+
+}
+
+
+/*========================================*/
+
+@media (max-width:420px){
+
+.menu-section{
+
+padding:70px 18px;
+
+}
+
+.menu-heading h2{
+
+font-size:32px;
+
+}
+
+.menu-heading p{
+
+font-size:.82rem;
+
+}
+
+.menu-tabs{
+
+flex-direction:column;
+
+}
+
+.menu-tabs button{
+
+width:100%;
+
+}
+
+.menu-card{
+
+padding:18px;
+
+}
+
+.menu-icon{
+
+width:50px;
+
+height:50px;
+
+}
+
+.menu-icon svg{
+
+width:20px;
+
+height:20px;
+
+}
+
+.menu-card h3{
+
+font-size:22px;
+
+}
+
+.menu-card p{
+
+font-size:.8rem;
+
+}
+
+.menu-bottom strong{
+
+font-size:24px;
+
+}
+
+.menu-bottom button{
+
+font-size:.8rem;
+
+padding:14px;
+
+}
+
+}
+
+
+/*========================================
+ PERFORMANCE
+========================================*/
+
+.menu-card,
+.menu-icon,
+.menu-bottom button,
+.menu-tabs button,
+.menu-bean{
+
+will-change:transform,opacity;
+
+}
+
+
+/*========================================
+ SMOOTH RENDERING
+========================================*/
+
+.menu-section *,
+.menu-section *::before,
+.menu-section *::after{
+
+backface-visibility:hidden;
+
+transform-style:preserve-3d;
+
+-webkit-font-smoothing:antialiased;
+
+}
+
+
+/*========================================
+ FINAL TRANSITIONS
+========================================*/
+
+.menu-section h2,
+.menu-section h3,
+.menu-section p,
+.menu-section span,
+.menu-section button,
+.menu-section div{
+
+transition:.35s ease;
+
+}
+
+
+/*========================================
+ SECTION COMPLETE
+========================================*/
+
+.menu-section{
+
+isolation:isolate;
+
+}

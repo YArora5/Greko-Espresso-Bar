@@ -1,0 +1,1059 @@
+/*==================================================
+ FOOTER - PART 1
+ SECTION + LAYOUT
+==================================================*/
+
+.footer{
+
+    position:relative;
+
+    overflow:hidden;
+
+    padding:110px 8% 30px;
+
+    background:
+
+    linear-gradient(
+    180deg,
+    #2d1c13 0%,
+    #1b120d 100%
+    );
+
+    color:#fff;
+
+}
+
+.footer::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+    radial-gradient(
+    circle at 20% 20%,
+    rgba(255,255,255,.05),
+    transparent 35%
+    ),
+
+    radial-gradient(
+    circle at 85% 80%,
+    rgba(255,255,255,.03),
+    transparent 35%
+    );
+
+    pointer-events:none;
+
+}
+
+.footer-container{
+
+    position:relative;
+
+    z-index:2;
+
+    max-width:1400px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:
+    1.4fr
+    .9fr
+    1fr;
+
+    gap:70px;
+
+    padding-bottom:60px;
+
+}
+
+
+/*========================================
+ FOOTER ABOUT
+========================================*/
+
+.footer-about{
+
+    max-width:420px;
+
+}
+
+.footer-logo{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+    margin-bottom:24px;
+
+}
+
+.footer-logo svg{
+
+    color:#d5a16b;
+
+}
+
+.footer-logo h2{
+
+    font-size:34px;
+
+    letter-spacing:2px;
+
+    color:#fff;
+
+}
+
+.footer-about p{
+
+    color:rgba(255,255,255,.72);
+
+    line-height:2;
+
+    font-size:.96rem;
+
+}
+
+
+/*========================================
+ HEADING
+========================================*/
+
+.footer-links h3,
+
+.footer-contact h3{
+
+    font-size:26px;
+
+    margin-bottom:26px;
+
+    color:#fff;
+
+}
+/*==================================================
+ FOOTER - PART 2
+ LINKS + CONTACT + SOCIAL
+==================================================*/
+
+.footer-links{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:16px;
+
+}
+
+.footer-links a{
+
+    width:fit-content;
+
+    color:rgba(255,255,255,.72);
+
+    text-decoration:none;
+
+    transition:.35s ease;
+
+    font-size:.95rem;
+
+}
+
+.footer-links a:hover{
+
+    color:#d5a16b;
+
+    transform:translateX(8px);
+
+}
+
+
+/*========================================
+ CONTACT
+========================================*/
+
+.footer-contact{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+}
+
+.footer-contact div{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+    color:rgba(255,255,255,.72);
+
+}
+
+.footer-contact svg{
+
+    color:#d5a16b;
+
+    flex-shrink:0;
+
+}
+
+.footer-contact span{
+
+    line-height:1.7;
+
+    font-size:.95rem;
+
+}
+
+
+/*========================================
+ SOCIAL ICONS
+========================================*/
+
+.footer-social{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:16px;
+
+    margin-top:35px;
+
+}
+
+.footer-social a{
+
+    width:48px;
+
+    height:48px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:50%;
+
+    text-decoration:none;
+
+    background:rgba(255,255,255,.08);
+
+    color:#fff;
+
+    transition:.35s ease;
+
+}
+
+.footer-social a:hover{
+
+    background:#d5a16b;
+
+    transform:
+
+    translateY(-6px)
+
+    rotate(-10deg);
+
+}
+
+.footer-social svg{
+
+    width:20px;
+
+    height:20px;
+
+}
+/*==================================================
+ FOOTER - PART 3
+ BOTTOM BAR + BACK TO TOP
+==================================================*/
+
+.footer-bottom{
+
+    position:relative;
+
+    z-index:2;
+
+    border-top:1px solid rgba(255,255,255,.08);
+
+    padding-top:28px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:20px;
+
+}
+
+.footer-bottom p{
+
+    color:rgba(255,255,255,.65);
+
+    font-size:.92rem;
+
+    line-height:1.8;
+
+}
+
+.footer-bottom button{
+
+    width:52px;
+
+    height:52px;
+
+    border:none;
+
+    outline:none;
+
+    cursor:pointer;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    border-radius:50%;
+
+    background:#d5a16b;
+
+    color:#fff;
+
+    transition:.35s ease;
+
+    box-shadow:
+
+    0 15px 35px rgba(0,0,0,.25);
+
+}
+
+.footer-bottom button:hover{
+
+    transform:
+
+    translateY(-6px)
+
+    rotate(-8deg);
+
+    background:#fff;
+
+    color:var(--primary);
+
+}
+
+.footer-bottom button svg{
+
+    width:20px;
+
+    height:20px;
+
+}
+
+
+/*========================================
+ DECORATIVE GLOW
+========================================*/
+
+.footer::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:420px;
+
+    height:420px;
+
+    right:-180px;
+
+    bottom:-180px;
+
+    border-radius:50%;
+
+    background:
+
+    radial-gradient(
+
+    rgba(213,161,107,.12),
+
+    transparent 70%
+
+    );
+
+    filter:blur(60px);
+
+    pointer-events:none;
+
+}
+/*==================================================
+ FOOTER - PART 4
+ HOVER EFFECTS + ANIMATIONS
+==================================================*/
+
+.footer-about p,
+
+.footer-links a,
+
+.footer-contact div,
+
+.footer-contact span{
+
+    transition:.35s ease;
+
+}
+
+
+/*========================================
+ LOGO
+========================================*/
+
+.footer-logo{
+
+    transition:.4s ease;
+
+}
+
+.footer-logo:hover{
+
+    transform:translateY(-4px);
+
+}
+
+.footer-logo svg{
+
+    transition:.4s ease;
+
+}
+
+.footer-logo:hover svg{
+
+    transform:
+
+    rotate(-12deg)
+
+    scale(1.15);
+
+    color:#f1c27d;
+
+}
+
+
+/*========================================
+ CONTACT ITEMS
+========================================*/
+
+.footer-contact div{
+
+    cursor:pointer;
+
+}
+
+.footer-contact div:hover{
+
+    transform:translateX(8px);
+
+}
+
+.footer-contact div:hover svg{
+
+    color:#fff;
+
+}
+
+.footer-contact div:hover span{
+
+    color:#d5a16b;
+
+}
+
+
+/*========================================
+ SHINE EFFECT
+========================================*/
+
+.footer-social a,
+
+.footer-bottom button{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.footer-social a::before,
+
+.footer-bottom button::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+    linear-gradient(
+
+    120deg,
+
+    transparent,
+
+    rgba(255,255,255,.25),
+
+    transparent
+
+    );
+
+    transform:translateX(-120%);
+
+    transition:1s;
+
+}
+
+.footer-social a:hover::before,
+
+.footer-bottom button:hover::before{
+
+    transform:translateX(120%);
+
+}
+
+
+/*========================================
+ FLOATING ANIMATION
+========================================*/
+
+.footer-social a{
+
+    animation:footerFloat 6s ease-in-out infinite;
+
+}
+
+.footer-social a:nth-child(2){
+
+    animation-delay:1s;
+
+}
+
+.footer-social a:nth-child(3){
+
+    animation-delay:2s;
+
+}
+
+.footer-social a:nth-child(4){
+
+    animation-delay:3s;
+
+}
+
+@keyframes footerFloat{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-6px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+/*==================================================
+ FOOTER - PART 5
+ TABLET RESPONSIVE
+==================================================*/
+
+@media (max-width:1200px){
+
+.footer{
+
+padding:90px 6% 28px;
+
+}
+
+.footer-container{
+
+grid-template-columns:
+1.2fr
+.8fr
+1fr;
+
+gap:50px;
+
+}
+
+.footer-logo h2{
+
+font-size:30px;
+
+}
+
+.footer-about p{
+
+font-size:.92rem;
+
+}
+
+.footer-links h3,
+
+.footer-contact h3{
+
+font-size:24px;
+
+}
+
+.footer-social{
+
+margin-top:28px;
+
+}
+
+}
+
+
+/*========================================*/
+
+@media (max-width:992px){
+
+.footer{
+
+padding:80px 35px 25px;
+
+}
+
+.footer-container{
+
+grid-template-columns:1fr;
+
+gap:45px;
+
+text-align:center;
+
+}
+
+.footer-about{
+
+max-width:650px;
+
+margin:auto;
+
+}
+
+.footer-logo{
+
+justify-content:center;
+
+}
+
+.footer-links{
+
+align-items:center;
+
+}
+
+.footer-contact{
+
+align-items:center;
+
+}
+
+.footer-contact div{
+
+justify-content:center;
+
+}
+
+.footer-social{
+
+justify-content:center;
+
+}
+
+.footer-bottom{
+
+flex-direction:column;
+
+text-align:center;
+
+gap:18px;
+
+}
+
+}
+
+
+/*========================================*/
+
+@media (max-width:768px){
+
+.footer{
+
+padding:70px 28px 22px;
+
+}
+
+.footer-container{
+
+gap:38px;
+
+}
+
+.footer-logo h2{
+
+font-size:28px;
+
+}
+
+.footer-about p{
+
+font-size:.9rem;
+
+line-height:1.9;
+
+}
+
+.footer-links h3,
+
+.footer-contact h3{
+
+font-size:22px;
+
+margin-bottom:18px;
+
+}
+
+.footer-links{
+
+gap:14px;
+
+}
+
+.footer-contact{
+
+gap:14px;
+
+}
+
+.footer-social{
+
+gap:14px;
+
+}
+
+.footer-social a{
+
+width:44px;
+
+height:44px;
+
+}
+
+.footer-bottom p{
+
+font-size:.86rem;
+
+}
+
+}
+/*==================================================
+ FOOTER - PART 6
+ MOBILE RESPONSIVE + FINAL POLISH
+==================================================*/
+
+@media (max-width:640px){
+
+.footer{
+
+padding:60px 22px 20px;
+
+}
+
+.footer-container{
+
+gap:32px;
+
+}
+
+.footer-logo{
+
+justify-content:center;
+
+gap:10px;
+
+}
+
+.footer-logo h2{
+
+font-size:24px;
+
+}
+
+.footer-about{
+
+text-align:center;
+
+}
+
+.footer-about p{
+
+font-size:.86rem;
+
+line-height:1.8;
+
+}
+
+.footer-links h3,
+
+.footer-contact h3{
+
+font-size:20px;
+
+margin-bottom:16px;
+
+}
+
+.footer-links{
+
+gap:12px;
+
+align-items:center;
+
+}
+
+.footer-links a{
+
+font-size:.88rem;
+
+}
+
+.footer-contact{
+
+gap:12px;
+
+align-items:center;
+
+}
+
+.footer-contact div{
+
+justify-content:center;
+
+gap:10px;
+
+}
+
+.footer-contact span{
+
+font-size:.84rem;
+
+}
+
+.footer-social{
+
+justify-content:center;
+
+gap:12px;
+
+margin-top:22px;
+
+}
+
+.footer-social a{
+
+width:42px;
+
+height:42px;
+
+}
+
+.footer-bottom{
+
+flex-direction:column;
+
+gap:16px;
+
+padding-top:22px;
+
+}
+
+.footer-bottom p{
+
+font-size:.8rem;
+
+text-align:center;
+
+}
+
+.footer-bottom button{
+
+width:46px;
+
+height:46px;
+
+}
+
+}
+
+
+/*========================================*/
+
+@media (max-width:420px){
+
+.footer{
+
+padding:50px 18px 18px;
+
+}
+
+.footer-logo h2{
+
+font-size:22px;
+
+}
+
+.footer-about p{
+
+font-size:.8rem;
+
+}
+
+.footer-links h3,
+
+.footer-contact h3{
+
+font-size:18px;
+
+}
+
+.footer-links a{
+
+font-size:.82rem;
+
+}
+
+.footer-contact span{
+
+font-size:.78rem;
+
+}
+
+.footer-social a{
+
+width:38px;
+
+height:38px;
+
+}
+
+.footer-social svg{
+
+width:18px;
+
+height:18px;
+
+}
+
+.footer-bottom p{
+
+font-size:.75rem;
+
+}
+
+.footer-bottom button{
+
+width:40px;
+
+height:40px;
+
+}
+
+}
+
+
+/*========================================
+ PERFORMANCE
+========================================*/
+
+.footer-logo,
+.footer-links a,
+.footer-contact div,
+.footer-social a,
+.footer-bottom button{
+
+will-change:transform,opacity;
+
+}
+
+
+/*========================================
+ SMOOTH RENDERING
+========================================*/
+
+.footer *,
+.footer *::before,
+.footer *::after{
+
+backface-visibility:hidden;
+
+transform-style:preserve-3d;
+
+-webkit-font-smoothing:antialiased;
+
+}
+
+
+/*========================================
+ FINAL TRANSITIONS
+========================================*/
+
+.footer h2,
+.footer h3,
+.footer p,
+.footer span,
+.footer a,
+.footer button,
+.footer svg,
+.footer div{
+
+transition:.35s ease;
+
+}
+
+
+/*========================================
+ SECTION COMPLETE
+========================================*/
+
+.footer{
+
+isolation:isolate;
+
+}

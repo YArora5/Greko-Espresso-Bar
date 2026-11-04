@@ -1,0 +1,435 @@
+/* ===========================================
+   GOOGLE FONTS
+=========================================== */
+
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=DM+Sans:wght@300;400;500;700&display=swap");
+
+/* ===========================================
+   ROOT VARIABLES
+=========================================== */
+
+:root{
+
+  /* COLORS */
+
+  --bg:#f6efe4;
+
+  --bg-light:#fbf8f3;
+
+  --bg-dark:#e6d9c5;
+
+  --primary:#6c4b32;
+
+  --secondary:#68704a;
+
+  --accent:#d4a373;
+
+  --text:#2d221b;
+
+  --text-light:#7b6d62;
+
+  --white:#ffffff;
+
+  --border:rgba(0,0,0,.08);
+
+  --shadow:0 15px 45px rgba(0,0,0,.08);
+
+  --radius:24px;
+
+  --transition:.35s ease;
+
+}
+
+
+
+/* ===========================================
+   RESET
+=========================================== */
+
+*{
+
+margin:0;
+
+padding:0;
+
+box-sizing:border-box;
+
+}
+
+*::before,
+*::after{
+
+box-sizing:border-box;
+
+}
+
+
+
+/* ===========================================
+   HTML
+=========================================== */
+
+html{
+
+scroll-behavior:smooth;
+
+overflow-x:hidden;
+
+}
+
+
+
+/* ===========================================
+   BODY
+=========================================== */
+
+body{
+
+font-family:"DM Sans",sans-serif;
+
+background:var(--bg);
+
+color:var(--text);
+
+overflow-x:hidden;
+
+line-height:1.6;
+
+-webkit-font-smoothing:antialiased;
+
+-moz-osx-font-smoothing:grayscale;
+
+}
+
+
+
+/* ===========================================
+   ROOT
+=========================================== */
+
+#root{
+
+width:100%;
+
+overflow:hidden;
+
+}
+
+
+
+/* ===========================================
+   LINKS
+=========================================== */
+
+a{
+
+text-decoration:none;
+
+color:inherit;
+
+}
+
+
+
+/* ===========================================
+   LISTS
+=========================================== */
+
+ul{
+
+list-style:none;
+
+}
+
+
+
+/* ===========================================
+   BUTTON
+=========================================== */
+
+button{
+
+border:none;
+
+outline:none;
+
+background:none;
+
+font-family:inherit;
+
+cursor:pointer;
+
+}
+
+
+
+/* ===========================================
+   INPUT
+=========================================== */
+
+input,
+textarea,
+select{
+
+font-family:inherit;
+
+outline:none;
+
+}
+
+
+
+/* ===========================================
+   IMAGES
+=========================================== */
+
+img{
+
+display:block;
+
+max-width:100%;
+
+user-select:none;
+
+}
+
+
+
+/* ===========================================
+   SECTION
+=========================================== */
+
+section{
+
+position:relative;
+
+width:100%;
+
+padding:120px 8%;
+
+}
+
+
+
+/* ===========================================
+   HEADINGS
+=========================================== */
+
+h1,
+h2,
+h3,
+h4{
+
+font-family:"Cormorant Garamond",serif;
+
+font-weight:600;
+
+line-height:1;
+
+}
+
+
+
+/* ===========================================
+   PARAGRAPH
+=========================================== */
+
+p{
+
+color:var(--text-light);
+
+line-height:1.8;
+
+}
+
+
+
+/* ===========================================
+   COMMON CONTAINER
+=========================================== */
+
+.container{
+
+width:100%;
+
+max-width:1350px;
+
+margin:auto;
+
+}
+
+
+
+/* ===========================================
+   COMMON TITLE
+=========================================== */
+
+.section-tag{
+
+font-size:.82rem;
+
+letter-spacing:5px;
+
+text-transform:uppercase;
+
+color:var(--secondary);
+
+margin-bottom:18px;
+
+}
+
+
+
+.section-title{
+
+font-size:clamp(3rem,6vw,5.5rem);
+
+margin-bottom:25px;
+
+color:var(--text);
+
+}
+
+
+
+.section-description{
+
+max-width:650px;
+
+font-size:1.05rem;
+
+}
+
+
+
+/* ===========================================
+   SCROLLBAR
+=========================================== */
+
+::-webkit-scrollbar{
+
+width:8px;
+
+}
+
+
+
+::-webkit-scrollbar-track{
+
+background:var(--bg);
+
+}
+
+
+
+::-webkit-scrollbar-thumb{
+
+background:var(--secondary);
+
+border-radius:50px;
+
+}
+
+
+
+/* ===========================================
+   TEXT SELECTION
+=========================================== */
+
+::selection{
+
+background:var(--secondary);
+
+color:white;
+
+}
+
+
+
+/* ===========================================
+   SMOOTH ANIMATIONS
+=========================================== */
+
+html.lenis{
+
+height:auto;
+
+}
+
+
+
+.fade-up{
+
+opacity:0;
+
+transform:translateY(40px);
+
+}
+
+
+
+.glass{
+
+background:rgba(255,255,255,.25);
+
+backdrop-filter:blur(20px);
+
+border:1px solid rgba(255,255,255,.2);
+
+}
+
+
+
+/* ===========================================
+   RESPONSIVE
+=========================================== */
+
+@media(max-width:1200px){
+
+section{
+
+padding:110px 6%;
+
+}
+
+}
+
+
+
+@media(max-width:768px){
+
+section{
+
+padding:90px 24px;
+
+}
+
+
+
+.section-title{
+
+font-size:3rem;
+
+}
+
+
+
+.section-description{
+
+font-size:1rem;
+
+}
+
+}
+
+
+
+@media(max-width:480px){
+
+.section-title{
+
+font-size:2.5rem;
+
+}
+
+}

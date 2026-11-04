@@ -1,0 +1,1585 @@
+/*==================================================
+ BREW FINDER - PART 1
+ LAYOUT + LEFT SECTION
+==================================================*/
+
+.brew{
+
+    position:relative;
+
+    width:100%;
+
+    padding:140px 8%;
+
+    overflow:hidden;
+
+    background:
+
+    linear-gradient(
+    180deg,
+    #f8f4ed 0%,
+    #f1e5d5 100%
+    );
+
+}
+
+.brew::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+    radial-gradient(
+    circle at 15% 20%,
+    rgba(255,255,255,.55),
+    transparent 35%
+    ),
+
+    radial-gradient(
+    circle at 85% 75%,
+    rgba(108,75,50,.08),
+    transparent 35%
+    );
+
+    pointer-events:none;
+
+}
+
+.brew-container{
+
+    position:relative;
+
+    z-index:2;
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:90px;
+
+    align-items:center;
+
+}
+
+.brew-left{
+
+    max-width:620px;
+
+}
+
+.brew-tag{
+
+    color:var(--secondary);
+
+    letter-spacing:6px;
+
+    text-transform:uppercase;
+
+    font-size:.82rem;
+
+    margin-bottom:18px;
+
+    font-weight:600;
+
+}
+
+.brew h2{
+
+    font-size:clamp(52px,6vw,84px);
+
+    line-height:1;
+
+    color:var(--primary);
+
+    margin-bottom:30px;
+
+}
+
+.brew-text{
+
+    color:#6d6258;
+
+    line-height:2;
+
+    font-size:1.05rem;
+
+    margin-bottom:45px;
+
+}
+
+/*========================================
+ MOOD BUTTON GRID
+========================================*/
+
+.mood-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:18px;
+
+}
+
+.mood-grid button{
+
+    padding:18px 22px;
+
+    border:none;
+
+    outline:none;
+
+    cursor:pointer;
+
+    border-radius:18px;
+
+    background:#fff;
+
+    color:var(--primary);
+
+    font-size:.95rem;
+
+    font-weight:600;
+
+    transition:.35s ease;
+
+    box-shadow:
+
+    0 15px 35px rgba(0,0,0,.08);
+
+}
+
+.mood-grid button:hover{
+
+    transform:translateY(-5px);
+
+    background:#ece3d6;
+
+}
+
+.mood-grid button.active{
+
+    background:var(--secondary);
+
+    color:#fff;
+
+    transform:translateY(-6px);
+
+    box-shadow:
+
+    0 18px 35px rgba(0,0,0,.18);
+
+}
+/*==================================================
+ BREW FINDER - PART 2
+ RIGHT CARD + PLACEHOLDER
+==================================================*/
+
+.brew-right{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.brew-card{
+
+    position:relative;
+
+    width:480px;
+
+    min-height:560px;
+
+    border-radius:36px;
+
+    overflow:hidden;
+
+    padding:45px;
+
+    background:
+    linear-gradient(
+    180deg,
+    #7b5638,
+    #573624 45%,
+    #2d1c15
+    );
+
+    color:#fff;
+
+    box-shadow:
+    0 35px 80px rgba(0,0,0,.18);
+
+    transition:.45s ease;
+
+}
+
+.brew-card:hover{
+
+    transform:
+    translateY(-12px)
+    rotate(-1deg);
+
+}
+
+.brew-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+    linear-gradient(
+
+    180deg,
+
+    rgba(255,255,255,.08),
+
+    transparent 35%,
+
+    rgba(0,0,0,.25)
+
+    );
+
+}
+
+.coffee-icon{
+
+    width:120px;
+
+    height:120px;
+
+    margin:0 auto 35px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:58px;
+
+    background:
+
+    rgba(255,255,255,.12);
+
+    backdrop-filter:blur(15px);
+
+    border:1px solid rgba(255,255,255,.18);
+
+}
+
+.brew-card h3{
+
+    text-align:center;
+
+    font-size:52px;
+
+    color:#fff;
+
+    margin-bottom:18px;
+
+}
+
+.brew-card p{
+
+    text-align:center;
+
+    color:rgba(255,255,255,.82);
+
+    line-height:1.9;
+
+    margin-bottom:35px;
+
+}
+
+.brew-info{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:15px;
+
+    margin-bottom:40px;
+
+}
+
+.brew-info span{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    padding:16px 18px;
+
+    border-radius:16px;
+
+    background:rgba(255,255,255,.10);
+
+    backdrop-filter:blur(18px);
+
+    color:#fff;
+
+}
+
+.brew-card button{
+
+    width:100%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:12px;
+
+    padding:18px;
+
+    border:none;
+
+    border-radius:18px;
+
+    background:var(--secondary);
+
+    color:#fff;
+
+    cursor:pointer;
+
+    font-weight:600;
+
+    font-size:.95rem;
+
+    transition:.35s ease;
+
+}
+
+.brew-card button:hover{
+
+    background:#4d5733;
+
+    transform:translateY(-4px);
+
+}
+
+
+/*========================================
+ PLACEHOLDER
+========================================*/
+
+.brew-placeholder{
+
+    width:480px;
+
+    min-height:560px;
+
+    border-radius:36px;
+
+    padding:45px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    background:#fff;
+
+    box-shadow:
+
+    0 30px 70px rgba(0,0,0,.10);
+
+}
+
+.brew-placeholder svg{
+
+    width:80px;
+
+    height:80px;
+
+    color:var(--secondary);
+
+    margin-bottom:30px;
+
+}
+
+.brew-placeholder h3{
+
+    font-size:42px;
+
+    color:var(--primary);
+
+    margin-bottom:20px;
+
+}
+
+.brew-placeholder p{
+
+    max-width:320px;
+
+    line-height:1.8;
+
+    color:#6d6258;
+
+}
+/*==================================================
+ BREW FINDER - PART 3
+ FLOATING COFFEE BEANS + BACKGROUND DECOR
+==================================================*/
+
+.brew-card::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:650px;
+
+    height:650px;
+
+    border-radius:50%;
+
+    background:
+
+    radial-gradient(
+
+    rgba(255,255,255,.08),
+
+    transparent 72%
+
+    );
+
+    left:-180px;
+
+    top:-180px;
+
+    animation:brewGlow 10s linear infinite;
+
+}
+
+
+/*========================================
+ FLOATING BEANS
+========================================*/
+
+.brew-bean{
+
+    position:absolute;
+
+    width:30px;
+
+    height:42px;
+
+    border-radius:50%;
+
+    background:
+
+    linear-gradient(
+
+    145deg,
+
+    #8c5a37,
+
+    #5b3521
+
+    );
+
+    box-shadow:
+
+    inset -3px -3px 5px rgba(0,0,0,.18),
+
+    inset 2px 2px 4px rgba(255,255,255,.08),
+
+    0 10px 20px rgba(0,0,0,.15);
+
+    animation:brewBeanFloat 7s ease-in-out infinite;
+
+}
+
+.brew-bean::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:50%;
+
+    top:10%;
+
+    transform:translateX(-50%);
+
+    width:2px;
+
+    height:80%;
+
+    border-radius:999px;
+
+    background:#d4a373;
+
+}
+
+.bean-a{
+
+    top:40px;
+
+    left:35px;
+
+    animation-delay:0s;
+
+}
+
+.bean-b{
+
+    top:110px;
+
+    right:40px;
+
+    animation-delay:1.5s;
+
+}
+
+.bean-c{
+
+    bottom:130px;
+
+    left:55px;
+
+    animation-delay:3s;
+
+}
+
+.bean-d{
+
+    bottom:55px;
+
+    right:60px;
+
+    animation-delay:4.5s;
+
+}
+
+
+/*========================================
+ FLOATING PARTICLES
+========================================*/
+
+.brew-particle{
+
+    position:absolute;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.28);
+
+    filter:blur(2px);
+
+    animation:brewParticle 11s linear infinite;
+
+}
+
+.brew-particle:nth-child(1){
+
+    width:8px;
+    height:8px;
+
+    top:18%;
+    left:22%;
+
+}
+
+.brew-particle:nth-child(2){
+
+    width:12px;
+    height:12px;
+
+    top:35%;
+    right:18%;
+
+    animation-delay:2s;
+
+}
+
+.brew-particle:nth-child(3){
+
+    width:6px;
+    height:6px;
+
+    bottom:25%;
+    left:18%;
+
+    animation-delay:4s;
+
+}
+
+.brew-particle:nth-child(4){
+
+    width:10px;
+    height:10px;
+
+    bottom:15%;
+    right:25%;
+
+    animation-delay:7s;
+
+}
+
+
+/*========================================
+ DECORATIVE RINGS
+========================================*/
+
+.brew-ring{
+
+    position:absolute;
+
+    border-radius:50%;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    animation:ringRotate 22s linear infinite;
+
+}
+
+.brew-ring1{
+
+    width:260px;
+
+    height:260px;
+
+    top:-80px;
+
+    left:-70px;
+
+}
+
+.brew-ring2{
+
+    width:340px;
+
+    height:340px;
+
+    bottom:-120px;
+
+    right:-100px;
+
+    animation-direction:reverse;
+
+}
+
+
+/*========================================
+ KEYFRAMES
+========================================*/
+
+@keyframes brewBeanFloat{
+
+    0%{
+
+        transform:translateY(0) rotate(0deg);
+
+    }
+
+    25%{
+
+        transform:translateY(-14px) rotate(8deg);
+
+    }
+
+    50%{
+
+        transform:translateY(-6px) rotate(-8deg);
+
+    }
+
+    75%{
+
+        transform:translateY(-20px) rotate(5deg);
+
+    }
+
+    100%{
+
+        transform:translateY(0) rotate(0deg);
+
+    }
+
+}
+
+@keyframes brewParticle{
+
+    0%{
+
+        opacity:0;
+
+        transform:translateY(0);
+
+    }
+
+    25%{
+
+        opacity:.9;
+
+    }
+
+    80%{
+
+        opacity:.3;
+
+    }
+
+    100%{
+
+        opacity:0;
+
+        transform:translateY(-140px);
+
+    }
+
+}
+
+@keyframes brewGlow{
+
+    from{
+
+        transform:rotate(0deg);
+
+    }
+
+    to{
+
+        transform:rotate(360deg);
+
+    }
+
+}
+/*==================================================
+ BREW FINDER - PART 4
+ HOVER EFFECTS + GLASS + ANIMATIONS
+==================================================*/
+
+.brew-card{
+
+    cursor:pointer;
+
+    transition:
+    transform .55s ease,
+    box-shadow .55s ease;
+
+}
+
+.brew-card:hover{
+
+    transform:
+    translateY(-15px)
+    rotate(-1deg)
+    scale(1.02);
+
+    box-shadow:
+    0 45px 90px rgba(0,0,0,.25);
+
+}
+
+.brew-card:hover .brew-bean{
+
+    animation-duration:3.5s;
+
+}
+
+
+/*========================================
+ GLASS INFO
+========================================*/
+
+.brew-info span{
+
+    position:relative;
+
+    overflow:hidden;
+
+    transition:.35s ease;
+
+}
+
+.brew-info span::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+    linear-gradient(
+    120deg,
+    transparent,
+    rgba(255,255,255,.20),
+    transparent
+    );
+
+    transform:translateX(-120%);
+
+    transition:1s;
+
+}
+
+.brew-info span:hover::before{
+
+    transform:translateX(120%);
+
+}
+
+.brew-info span:hover{
+
+    background:rgba(255,255,255,.18);
+
+    transform:translateX(10px);
+
+}
+
+
+/*========================================
+ BUTTON
+========================================*/
+
+.brew-card button{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.brew-card button::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+    linear-gradient(
+    120deg,
+    transparent,
+    rgba(255,255,255,.28),
+    transparent
+    );
+
+    transform:translateX(-120%);
+
+    transition:1s;
+
+}
+
+.brew-card button:hover::before{
+
+    transform:translateX(120%);
+
+}
+
+.brew-card button svg{
+
+    transition:.35s ease;
+
+}
+
+.brew-card button:hover svg{
+
+    transform:translateX(6px);
+
+}
+
+
+/*========================================
+ MOOD BUTTONS
+========================================*/
+
+.mood-grid button{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.mood-grid button::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+    linear-gradient(
+    120deg,
+    transparent,
+    rgba(255,255,255,.35),
+    transparent
+    );
+
+    transform:translateX(-120%);
+
+    transition:.9s;
+
+}
+
+.mood-grid button:hover::after{
+
+    transform:translateX(120%);
+
+}
+
+.mood-grid button:hover{
+
+    transform:
+    translateY(-8px)
+    scale(1.04);
+
+}
+
+
+/*========================================
+ PLACEHOLDER
+========================================*/
+
+.brew-placeholder{
+
+    transition:.45s ease;
+
+}
+
+.brew-placeholder:hover{
+
+    transform:
+    translateY(-12px);
+
+    box-shadow:
+    0 45px 90px rgba(0,0,0,.16);
+
+}
+
+
+/*========================================
+ TITLE
+========================================*/
+
+.brew h2{
+
+    transition:.35s ease;
+
+}
+
+.brew:hover h2{
+
+    letter-spacing:1px;
+
+}
+
+
+/*========================================
+ TEXT
+========================================*/
+
+.brew-text{
+
+    transition:.35s ease;
+
+}
+
+.brew:hover .brew-text{
+
+    color:#5f554b;
+
+}
+
+
+/*========================================
+ CARD FLOAT
+========================================*/
+
+.brew-card{
+
+    animation:brewFloat 6s ease-in-out infinite;
+
+}
+
+@keyframes brewFloat{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-8px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+/*==================================================
+ BREW FINDER - PART 5
+ TABLET RESPONSIVE
+==================================================*/
+
+@media (max-width:1200px){
+
+.brew{
+
+padding:120px 6%;
+
+}
+
+.brew-container{
+
+gap:60px;
+
+}
+
+.brew h2{
+
+font-size:clamp(48px,5vw,72px);
+
+}
+
+.brew-text{
+
+font-size:1rem;
+
+line-height:1.9;
+
+}
+
+.brew-card,
+.brew-placeholder{
+
+width:420px;
+
+min-height:520px;
+
+padding:36px;
+
+}
+
+.coffee-icon{
+
+width:100px;
+
+height:100px;
+
+font-size:48px;
+
+}
+
+.brew-card h3{
+
+font-size:42px;
+
+}
+
+}
+
+
+/*========================================*/
+
+@media (max-width:992px){
+
+.brew{
+
+padding:100px 35px;
+
+}
+
+.brew-container{
+
+grid-template-columns:1fr;
+
+gap:70px;
+
+}
+
+.brew-left{
+
+max-width:100%;
+
+text-align:center;
+
+}
+
+.brew-text{
+
+max-width:650px;
+
+margin:0 auto 40px;
+
+}
+
+.mood-grid{
+
+max-width:600px;
+
+margin:auto;
+
+}
+
+.brew-right{
+
+justify-content:center;
+
+}
+
+.brew-card,
+.brew-placeholder{
+
+width:100%;
+
+max-width:480px;
+
+}
+
+.brew-card{
+
+text-align:center;
+
+}
+
+.brew-info{
+
+align-items:center;
+
+}
+
+.brew-info span{
+
+width:100%;
+
+justify-content:center;
+
+}
+
+.brew-card button{
+
+justify-content:center;
+
+}
+
+.brew-bean{
+
+transform:scale(.9);
+
+}
+
+}
+
+
+/*========================================*/
+
+@media (max-width:768px){
+
+.brew{
+
+padding:90px 28px;
+
+}
+
+.brew h2{
+
+font-size:52px;
+
+}
+
+.brew-text{
+
+font-size:.95rem;
+
+}
+
+.mood-grid{
+
+grid-template-columns:1fr 1fr;
+
+gap:14px;
+
+}
+
+.mood-grid button{
+
+padding:16px;
+
+font-size:.85rem;
+
+}
+
+.brew-card,
+.brew-placeholder{
+
+min-height:500px;
+
+padding:30px;
+
+}
+
+.brew-card h3{
+
+font-size:36px;
+
+}
+
+.brew-card p{
+
+font-size:.92rem;
+
+line-height:1.8;
+
+}
+
+.coffee-icon{
+
+width:90px;
+
+height:90px;
+
+font-size:42px;
+
+}
+
+}
+/*==================================================
+ BREW FINDER - PART 6
+ MOBILE RESPONSIVE
+==================================================*/
+
+@media (max-width:640px){
+
+.brew{
+
+padding:80px 22px;
+
+}
+
+.brew-container{
+
+gap:50px;
+
+}
+
+.brew-tag{
+
+font-size:.72rem;
+
+letter-spacing:4px;
+
+margin-bottom:16px;
+
+}
+
+.brew h2{
+
+font-size:40px;
+
+line-height:1.08;
+
+}
+
+.brew-text{
+
+font-size:.92rem;
+
+line-height:1.8;
+
+margin-bottom:32px;
+
+}
+
+.mood-grid{
+
+grid-template-columns:1fr;
+
+gap:12px;
+
+}
+
+.mood-grid button{
+
+padding:16px 18px;
+
+font-size:.85rem;
+
+border-radius:16px;
+
+}
+
+.brew-card,
+.brew-placeholder{
+
+width:100%;
+
+min-height:460px;
+
+padding:24px;
+
+border-radius:28px;
+
+}
+
+.coffee-icon{
+
+width:78px;
+
+height:78px;
+
+font-size:36px;
+
+margin-bottom:24px;
+
+}
+
+.brew-card h3{
+
+font-size:32px;
+
+margin-bottom:14px;
+
+}
+
+.brew-card p{
+
+font-size:.88rem;
+
+line-height:1.75;
+
+margin-bottom:24px;
+
+}
+
+.brew-info{
+
+gap:12px;
+
+margin-bottom:28px;
+
+}
+
+.brew-info span{
+
+padding:14px;
+
+font-size:.82rem;
+
+}
+
+.brew-card button{
+
+padding:16px;
+
+font-size:.85rem;
+
+}
+
+.brew-bean{
+
+transform:scale(.75);
+
+}
+
+.bean-a{
+
+top:20px;
+
+left:18px;
+
+}
+
+.bean-b{
+
+top:70px;
+
+right:20px;
+
+}
+
+.bean-c{
+
+bottom:90px;
+
+left:22px;
+
+}
+
+.bean-d{
+
+bottom:30px;
+
+right:22px;
+
+}
+
+}
+
+
+/*========================================*/
+
+@media (max-width:420px){
+
+.brew{
+
+padding:70px 18px;
+
+}
+
+.brew h2{
+
+font-size:34px;
+
+}
+
+.brew-text{
+
+font-size:.86rem;
+
+}
+
+.brew-card,
+.brew-placeholder{
+
+min-height:420px;
+
+padding:20px;
+
+}
+
+.coffee-icon{
+
+width:70px;
+
+height:70px;
+
+font-size:32px;
+
+}
+
+.brew-card h3{
+
+font-size:28px;
+
+}
+
+.brew-card p{
+
+font-size:.82rem;
+
+}
+
+.brew-info span{
+
+font-size:.76rem;
+
+padding:12px;
+
+}
+
+.brew-card button{
+
+width:100%;
+
+justify-content:center;
+
+}
+
+.brew-bean{
+
+display:none;
+
+}
+
+.brew-ring{
+
+display:none;
+
+}
+
+}
+
+
+/*========================================
+ SMOOTH RENDERING
+========================================*/
+
+.brew *,
+.brew *::before,
+.brew *::after{
+
+backface-visibility:hidden;
+
+transform-style:preserve-3d;
+
+-webkit-font-smoothing:antialiased;
+
+}
+
+
+/*========================================
+ PERFORMANCE
+========================================*/
+
+.brew-card,
+.brew-placeholder,
+.brew-info span,
+.mood-grid button,
+.brew-bean{
+
+will-change:transform,opacity;
+
+}
+
+
+/*========================================
+ FINAL TRANSITIONS
+========================================*/
+
+.brew h2,
+.brew p,
+.brew span,
+.brew button,
+.brew div{
+
+transition:.35s ease;
+
+}
+
+
+/*========================================
+ SECTION COMPLETE
+========================================*/
+
+.brew{
+
+isolation:isolate;
+
+}

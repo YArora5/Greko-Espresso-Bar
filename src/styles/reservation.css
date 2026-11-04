@@ -1,0 +1,1251 @@
+/*==================================================
+ RESERVATION - PART 1
+ SECTION + LEFT CONTENT
+==================================================*/
+
+.reservation{
+
+    position:relative;
+
+    width:100%;
+
+    overflow:hidden;
+
+    padding:140px 8%;
+
+    background:
+
+    linear-gradient(
+    180deg,
+    #f8f3ea 0%,
+    #efe2cf 100%
+    );
+
+}
+
+.reservation::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+    radial-gradient(
+    circle at 20% 20%,
+    rgba(255,255,255,.55),
+    transparent 35%
+    ),
+
+    radial-gradient(
+    circle at 85% 80%,
+    rgba(108,75,50,.08),
+    transparent 35%
+    );
+
+    pointer-events:none;
+
+}
+
+.reservation-container{
+
+    position:relative;
+
+    z-index:2;
+
+    max-width:1400px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:90px;
+
+    align-items:center;
+
+}
+
+.reservation-left{
+
+    max-width:620px;
+
+}
+
+.reservation-tag{
+
+    display:inline-block;
+
+    margin-bottom:18px;
+
+    color:var(--secondary);
+
+    text-transform:uppercase;
+
+    letter-spacing:6px;
+
+    font-size:.82rem;
+
+    font-weight:600;
+
+}
+
+.reservation h2{
+
+    font-size:clamp(54px,6vw,84px);
+
+    line-height:1;
+
+    color:var(--primary);
+
+    margin-bottom:28px;
+
+}
+
+.reservation-left p{
+
+    color:#6c6158;
+
+    line-height:2;
+
+    font-size:1.05rem;
+
+    margin-bottom:45px;
+
+}
+
+
+/*========================================
+ INFO BOXES
+========================================*/
+
+.reservation-info{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+}
+
+.reservation-info div{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:16px;
+
+    padding:18px 22px;
+
+    border-radius:18px;
+
+    background:rgba(255,255,255,.75);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.35);
+
+    box-shadow:
+
+    0 12px 30px rgba(0,0,0,.08);
+
+}
+
+.reservation-info svg{
+
+    color:var(--secondary);
+
+    flex-shrink:0;
+
+}
+
+.reservation-info span{
+
+    color:var(--primary);
+
+    font-size:.95rem;
+
+    font-weight:500;
+
+}
+
+
+/*========================================
+ HEADING GLOW
+========================================*/
+
+.reservation-left::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:260px;
+
+    height:260px;
+
+    left:0;
+
+    top:-60px;
+
+    border-radius:50%;
+
+    background:
+
+    radial-gradient(
+
+    rgba(255,255,255,.28),
+
+    transparent 70%
+
+    );
+
+    filter:blur(45px);
+
+    animation:reservationGlow 8s ease-in-out infinite;
+
+    z-index:-1;
+
+}
+
+@keyframes reservationGlow{
+
+    0%{
+
+        transform:scale(.9);
+
+        opacity:.3;
+
+    }
+
+    50%{
+
+        transform:scale(1.15);
+
+        opacity:.65;
+
+    }
+
+    100%{
+
+        transform:scale(.9);
+
+        opacity:.3;
+
+    }
+
+}
+/*==================================================
+ RESERVATION - PART 2
+ RESERVATION FORM
+==================================================*/
+
+.reservation-form{
+
+    position:relative;
+
+    padding:45px;
+
+    border-radius:34px;
+
+    background:rgba(255,255,255,.75);
+
+    backdrop-filter:blur(20px);
+
+    border:1px solid rgba(255,255,255,.35);
+
+    box-shadow:
+
+    0 25px 60px rgba(0,0,0,.10);
+
+}
+
+.reservation-form h3{
+
+    font-size:42px;
+
+    color:var(--primary);
+
+    margin-bottom:30px;
+
+    text-align:center;
+
+}
+
+.reservation-form input,
+
+.reservation-form textarea{
+
+    width:100%;
+
+    border:none;
+
+    outline:none;
+
+    margin-bottom:18px;
+
+    padding:18px 22px;
+
+    border-radius:18px;
+
+    background:#fff;
+
+    color:var(--primary);
+
+    font-size:.95rem;
+
+    box-shadow:
+
+    inset 0 0 0 1px rgba(0,0,0,.06);
+
+    transition:.35s ease;
+
+}
+
+.reservation-form textarea{
+
+    resize:none;
+
+    min-height:140px;
+
+}
+
+.reservation-form input:focus,
+
+.reservation-form textarea:focus{
+
+    box-shadow:
+
+    0 0 0 2px rgba(165,124,82,.28);
+
+}
+
+.double-input{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:18px;
+
+    margin-bottom:18px;
+
+}
+
+.reservation-form button{
+
+    width:100%;
+
+    border:none;
+
+    cursor:pointer;
+
+    padding:18px;
+
+    border-radius:999px;
+
+    background:var(--secondary);
+
+    color:#fff;
+
+    font-size:1rem;
+
+    font-weight:600;
+
+    letter-spacing:1px;
+
+    transition:.35s ease;
+
+    box-shadow:
+
+    0 18px 35px rgba(0,0,0,.15);
+
+}
+
+.reservation-form button:hover{
+
+    background:var(--primary);
+
+    transform:
+
+    translateY(-4px);
+
+}
+/*==================================================
+ RESERVATION - PART 3
+ ICONS + BACKGROUND + DECORATIONS
+==================================================*/
+
+.reservation{
+
+    isolation:isolate;
+
+}
+
+/*========================================
+ FLOATING COFFEE BEANS
+========================================*/
+
+.reservation-bean{
+
+    position:absolute;
+
+    width:24px;
+
+    height:34px;
+
+    border-radius:50%;
+
+    background:
+
+    linear-gradient(
+
+    145deg,
+
+    #8b5b39,
+
+    #59331f
+
+    );
+
+    box-shadow:
+
+    inset -2px -2px 4px rgba(0,0,0,.18),
+
+    inset 2px 2px 3px rgba(255,255,255,.08),
+
+    0 8px 18px rgba(0,0,0,.16);
+
+    animation:reservationBean 7s ease-in-out infinite;
+
+}
+
+.reservation-bean::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:50%;
+
+    top:10%;
+
+    transform:translateX(-50%);
+
+    width:2px;
+
+    height:80%;
+
+    border-radius:999px;
+
+    background:#d7b185;
+
+}
+
+.bean-1{
+
+    top:12%;
+
+    left:5%;
+
+}
+
+.bean-2{
+
+    top:70%;
+
+    right:7%;
+
+    animation-delay:2s;
+
+}
+
+.bean-3{
+
+    bottom:10%;
+
+    left:18%;
+
+    animation-delay:4s;
+
+}
+
+
+/*========================================
+ DECORATIVE RINGS
+========================================*/
+
+.reservation-ring{
+
+    position:absolute;
+
+    border-radius:50%;
+
+    border:1px solid rgba(108,75,50,.08);
+
+    animation:reservationRotate 22s linear infinite;
+
+}
+
+.reservation-ring.one{
+
+    width:240px;
+
+    height:240px;
+
+    top:-110px;
+
+    right:-90px;
+
+}
+
+.reservation-ring.two{
+
+    width:320px;
+
+    height:320px;
+
+    bottom:-140px;
+
+    left:-120px;
+
+    animation-direction:reverse;
+
+}
+
+
+/*========================================
+ FLOATING PARTICLES
+========================================*/
+
+.reservation-particle{
+
+    position:absolute;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.35);
+
+    filter:blur(2px);
+
+    animation:reservationParticle 10s linear infinite;
+
+}
+
+.reservation-particle.small{
+
+    width:6px;
+
+    height:6px;
+
+}
+
+.reservation-particle.medium{
+
+    width:10px;
+
+    height:10px;
+
+}
+
+.reservation-particle.large{
+
+    width:14px;
+
+    height:14px;
+
+}
+
+
+/*========================================
+ INFO ICONS
+========================================*/
+
+.reservation-info svg{
+
+    transition:.35s ease;
+
+}
+
+.reservation-info div:hover svg{
+
+    transform:
+
+    rotate(-10deg)
+
+    scale(1.15);
+
+    color:var(--primary);
+
+}
+
+
+/*========================================
+ KEYFRAMES
+========================================*/
+
+@keyframes reservationBean{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:
+        translateY(-12px)
+        rotate(8deg);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+@keyframes reservationRotate{
+
+    from{
+
+        transform:rotate(0deg);
+
+    }
+
+    to{
+
+        transform:rotate(360deg);
+
+    }
+
+}
+
+@keyframes reservationParticle{
+
+    0%{
+
+        opacity:0;
+
+        transform:translateY(0);
+
+    }
+
+    25%{
+
+        opacity:.8;
+
+    }
+
+    100%{
+
+        opacity:0;
+
+        transform:translateY(-120px);
+
+    }
+
+}
+/*==================================================
+ RESERVATION - PART 4
+ HOVER EFFECTS + ANIMATIONS
+==================================================*/
+
+.reservation-form{
+
+    transition:
+    transform .45s ease,
+    box-shadow .45s ease,
+    background .45s ease;
+
+}
+
+.reservation-form:hover{
+
+    transform:
+    translateY(-12px);
+
+    box-shadow:
+    0 45px 90px rgba(0,0,0,.16);
+
+    background:rgba(255,255,255,.88);
+
+}
+
+
+/*========================================
+ INPUTS
+========================================*/
+
+.reservation-form input,
+
+.reservation-form textarea{
+
+    transition:
+    .35s ease;
+
+}
+
+.reservation-form input:hover,
+
+.reservation-form textarea:hover{
+
+    transform:
+    translateY(-2px);
+
+    box-shadow:
+
+    0 12px 24px rgba(0,0,0,.08);
+
+}
+
+.reservation-form input:focus,
+
+.reservation-form textarea:focus{
+
+    border-color:var(--secondary);
+
+    background:#fffefb;
+
+}
+
+
+/*========================================
+ BUTTON
+========================================*/
+
+.reservation-form button{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.reservation-form button::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+    linear-gradient(
+
+    120deg,
+
+    transparent,
+
+    rgba(255,255,255,.25),
+
+    transparent
+
+    );
+
+    transform:translateX(-120%);
+
+    transition:1s;
+
+}
+
+.reservation-form button:hover::before{
+
+    transform:translateX(120%);
+
+}
+
+.reservation-form button:hover{
+
+    background:var(--primary);
+
+    transform:
+    translateY(-5px);
+
+}
+
+
+/*========================================
+ INFO BOXES
+========================================*/
+
+.reservation-info div{
+
+    transition:.35s ease;
+
+}
+
+.reservation-info div:hover{
+
+    transform:
+    translateX(8px);
+
+    box-shadow:
+    0 20px 40px rgba(0,0,0,.12);
+
+}
+
+
+/*========================================
+ FLOATING FORM
+========================================*/
+
+.reservation-form{
+
+    animation:reservationFloat 6s ease-in-out infinite;
+
+}
+
+@keyframes reservationFloat{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-8px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+/*==================================================
+ RESERVATION - PART 5
+ TABLET RESPONSIVE
+==================================================*/
+
+@media (max-width:1200px){
+
+.reservation{
+
+padding:120px 6%;
+
+}
+
+.reservation-container{
+
+gap:60px;
+
+}
+
+.reservation h2{
+
+font-size:clamp(48px,5vw,72px);
+
+}
+
+.reservation-left p{
+
+font-size:1rem;
+
+}
+
+.reservation-form{
+
+padding:36px;
+
+}
+
+.reservation-form h3{
+
+font-size:36px;
+
+}
+
+}
+
+
+/*========================================*/
+
+@media (max-width:992px){
+
+.reservation{
+
+padding:100px 35px;
+
+}
+
+.reservation-container{
+
+grid-template-columns:1fr;
+
+gap:55px;
+
+}
+
+.reservation-left{
+
+max-width:100%;
+
+text-align:center;
+
+}
+
+.reservation-info{
+
+max-width:650px;
+
+margin:auto;
+
+}
+
+.reservation h2{
+
+font-size:56px;
+
+}
+
+.reservation-left p{
+
+max-width:620px;
+
+margin:0 auto 40px;
+
+}
+
+.reservation-form{
+
+max-width:650px;
+
+margin:auto;
+
+}
+
+}
+
+
+/*========================================*/
+
+@media (max-width:768px){
+
+.reservation{
+
+padding:90px 28px;
+
+}
+
+.reservation h2{
+
+font-size:46px;
+
+}
+
+.reservation-left p{
+
+font-size:.95rem;
+
+line-height:1.9;
+
+}
+
+.reservation-form{
+
+padding:30px;
+
+}
+
+.reservation-form h3{
+
+font-size:32px;
+
+}
+
+.reservation-info div{
+
+padding:16px 18px;
+
+}
+
+.double-input{
+
+grid-template-columns:1fr;
+
+gap:16px;
+
+}
+
+}
+/*==================================================
+ RESERVATION - PART 6
+ MOBILE RESPONSIVE + FINAL POLISH
+==================================================*/
+
+@media (max-width:640px){
+
+.reservation{
+
+padding:80px 22px;
+
+}
+
+.reservation-container{
+
+gap:45px;
+
+}
+
+.reservation-tag{
+
+font-size:.72rem;
+
+letter-spacing:4px;
+
+}
+
+.reservation h2{
+
+font-size:38px;
+
+line-height:1.08;
+
+}
+
+.reservation-left p{
+
+font-size:.9rem;
+
+line-height:1.8;
+
+margin-bottom:35px;
+
+}
+
+.reservation-info{
+
+gap:14px;
+
+}
+
+.reservation-info div{
+
+padding:15px 16px;
+
+gap:12px;
+
+}
+
+.reservation-info span{
+
+font-size:.85rem;
+
+}
+
+.reservation-form{
+
+padding:22px;
+
+border-radius:24px;
+
+}
+
+.reservation-form h3{
+
+font-size:28px;
+
+margin-bottom:22px;
+
+}
+
+.reservation-form input,
+
+.reservation-form textarea{
+
+padding:15px 16px;
+
+font-size:.88rem;
+
+margin-bottom:15px;
+
+}
+
+.reservation-form textarea{
+
+min-height:120px;
+
+}
+
+.reservation-form button{
+
+padding:15px;
+
+font-size:.9rem;
+
+}
+
+.reservation-bean,
+
+.reservation-ring{
+
+display:none;
+
+}
+
+}
+
+
+/*========================================*/
+
+@media (max-width:420px){
+
+.reservation{
+
+padding:70px 18px;
+
+}
+
+.reservation h2{
+
+font-size:32px;
+
+}
+
+.reservation-left p{
+
+font-size:.82rem;
+
+}
+
+.reservation-form{
+
+padding:18px;
+
+}
+
+.reservation-form h3{
+
+font-size:24px;
+
+}
+
+.reservation-form input,
+
+.reservation-form textarea{
+
+padding:14px;
+
+font-size:.82rem;
+
+}
+
+.reservation-form button{
+
+padding:14px;
+
+font-size:.82rem;
+
+}
+
+.reservation-info div{
+
+padding:14px;
+
+}
+
+.reservation-info svg{
+
+width:18px;
+
+height:18px;
+
+}
+
+.reservation-info span{
+
+font-size:.8rem;
+
+}
+
+.reservation-particle{
+
+display:none;
+
+}
+
+}
+
+
+/*========================================
+ PERFORMANCE
+========================================*/
+
+.reservation-form,
+.reservation-info div,
+.reservation-form button,
+.reservation-bean{
+
+will-change:transform,opacity;
+
+}
+
+
+/*========================================
+ SMOOTH RENDERING
+========================================*/
+
+.reservation *,
+.reservation *::before,
+.reservation *::after{
+
+backface-visibility:hidden;
+
+transform-style:preserve-3d;
+
+-webkit-font-smoothing:antialiased;
+
+}
+
+
+/*========================================
+ FINAL TRANSITIONS
+========================================*/
+
+.reservation h2,
+.reservation h3,
+.reservation p,
+.reservation span,
+.reservation input,
+.reservation textarea,
+.reservation button,
+.reservation div{
+
+transition:.35s ease;
+
+}
+
+
+/*========================================
+ SECTION COMPLETE
+========================================*/
+
+.reservation{
+
+isolation:isolate;
+
+}
+
+.reservation-success{
+    margin:16px 0 0;
+    padding:14px 16px;
+    border-radius:12px;
+    background:rgba(55,112,75,.10);
+    color:#315c3e;
+    font-size:.95rem;
+    line-height:1.6;
+}

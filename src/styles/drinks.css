@@ -1,0 +1,1376 @@
+/*==================================================
+ SIGNATURE DRINKS - PART 1
+ SECTION + HEADING
+==================================================*/
+
+.drinks{
+
+    position:relative;
+
+    width:100%;
+
+    padding:140px 8%;
+
+    overflow:hidden;
+
+    background:
+
+    linear-gradient(
+    180deg,
+    #f4ede3 0%,
+    #efe3d2 100%
+    );
+
+}
+
+.drinks::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+    radial-gradient(
+
+    circle at 20% 20%,
+
+    rgba(255,255,255,.55),
+
+    transparent 35%
+
+    ),
+
+    radial-gradient(
+
+    circle at 85% 75%,
+
+    rgba(108,75,50,.08),
+
+    transparent 35%
+
+    );
+
+    pointer-events:none;
+
+}
+
+.drinks-container{
+
+    position:relative;
+
+    z-index:2;
+
+    width:100%;
+
+    max-width:1400px;
+
+    margin:auto;
+
+}
+
+.drinks-heading{
+
+    text-align:center;
+
+    max-width:780px;
+
+    margin:0 auto 80px;
+
+}
+
+.drinks-tag{
+
+    color:var(--secondary);
+
+    text-transform:uppercase;
+
+    letter-spacing:6px;
+
+    font-size:.82rem;
+
+    font-weight:600;
+
+    margin-bottom:20px;
+
+}
+
+.drinks h2{
+
+    font-size:clamp(54px,6vw,86px);
+
+    line-height:1;
+
+    color:var(--primary);
+
+    margin-bottom:28px;
+
+}
+
+.drinks-description{
+
+    max-width:620px;
+
+    margin:auto;
+
+    color:#6c6158;
+
+    font-size:1.05rem;
+
+    line-height:2;
+
+}
+
+/*========================================
+ DECORATIVE BACKGROUND
+========================================*/
+
+.drinks-heading::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:260px;
+
+    height:260px;
+
+    left:50%;
+
+    top:-70px;
+
+    transform:translateX(-50%);
+
+    border-radius:50%;
+
+    background:
+
+    radial-gradient(
+
+    rgba(255,255,255,.28),
+
+    transparent 70%
+
+    );
+
+    filter:blur(45px);
+
+    animation:drinksGlow 8s ease-in-out infinite;
+
+    z-index:-1;
+
+}
+
+@keyframes drinksGlow{
+
+    0%{
+
+        transform:
+        translateX(-50%)
+        scale(.9);
+
+        opacity:.3;
+
+    }
+
+    50%{
+
+        transform:
+        translateX(-50%)
+        scale(1.15);
+
+        opacity:.65;
+
+    }
+
+    100%{
+
+        transform:
+        translateX(-50%)
+        scale(.9);
+
+        opacity:.3;
+
+    }
+
+}
+/*==================================================
+ SIGNATURE DRINKS - PART 2
+ DRINKS GRID + CARDS
+==================================================*/
+
+.drinks-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:35px;
+
+    align-items:stretch;
+
+}
+
+.drink-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+    border-radius:32px;
+
+    padding:35px;
+
+    background:rgba(255,255,255,.72);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.35);
+
+    box-shadow:
+
+    0 25px 60px rgba(0,0,0,.08);
+
+    transition:.45s ease;
+
+}
+
+.drink-card:hover{
+
+    transform:
+
+    translateY(-12px);
+
+    box-shadow:
+
+    0 40px 80px rgba(0,0,0,.15);
+
+}
+
+.drink-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+    linear-gradient(
+
+    180deg,
+
+    rgba(255,255,255,.12),
+
+    transparent,
+
+    rgba(0,0,0,.04)
+
+    );
+
+}
+
+.drink-card::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:280px;
+
+    height:280px;
+
+    border-radius:50%;
+
+    background:
+
+    radial-gradient(
+
+    rgba(255,255,255,.25),
+
+    transparent 70%
+
+    );
+
+    top:-140px;
+
+    right:-120px;
+
+}
+
+.drink-category{
+
+    display:inline-block;
+
+    margin-top:28px;
+
+    margin-bottom:14px;
+
+    color:var(--secondary);
+
+    text-transform:uppercase;
+
+    letter-spacing:3px;
+
+    font-size:.72rem;
+
+    font-weight:600;
+
+}
+
+.drink-card h3{
+
+    font-size:38px;
+
+    line-height:1.1;
+
+    color:var(--primary);
+
+    margin-bottom:18px;
+
+}
+
+.drink-card p{
+
+    color:#6b6056;
+
+    line-height:1.9;
+
+    margin-bottom:35px;
+
+}
+
+.drink-footer{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:15px;
+
+}
+
+.drink-footer strong{
+
+    font-size:30px;
+
+    font-family:"Cormorant Garamond",serif;
+
+    color:var(--primary);
+
+}
+
+.drink-footer button{
+
+    border:none;
+
+    cursor:pointer;
+
+    padding:14px 22px;
+
+    border-radius:999px;
+
+    background:var(--secondary);
+
+    color:#fff;
+
+    font-weight:600;
+
+    transition:.35s ease;
+
+}
+
+.drink-footer button:hover{
+
+    background:var(--primary);
+
+}
+/*==================================================
+ SIGNATURE DRINKS - PART 3
+ ICONS + FLOATING ELEMENTS + BACKGROUND
+==================================================*/
+
+.drink-icon{
+
+    position:relative;
+
+    width:95px;
+
+    height:95px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    color:#fff;
+
+    font-size:34px;
+
+    margin-bottom:20px;
+
+    box-shadow:
+
+    0 18px 35px rgba(0,0,0,.18);
+
+    transition:.45s ease;
+
+    z-index:3;
+
+}
+
+.drink-icon svg{
+
+    width:34px;
+
+    height:34px;
+
+}
+
+.drink-card:hover .drink-icon{
+
+    transform:
+
+    rotate(-12deg)
+
+    scale(1.08);
+
+}
+
+
+/*========================================
+ DECORATIVE CIRCLES
+========================================*/
+
+.drink-card .circle{
+
+    position:absolute;
+
+    border-radius:50%;
+
+    border:1px solid rgba(255,255,255,.18);
+
+    animation:drinkRotate 18s linear infinite;
+
+}
+
+.drink-card .circle1{
+
+    width:180px;
+
+    height:180px;
+
+    top:-70px;
+
+    right:-50px;
+
+}
+
+.drink-card .circle2{
+
+    width:240px;
+
+    height:240px;
+
+    left:-90px;
+
+    bottom:-90px;
+
+    animation-direction:reverse;
+
+}
+
+
+/*========================================
+ FLOATING COFFEE BEANS
+========================================*/
+
+.drink-bean{
+
+    position:absolute;
+
+    width:24px;
+
+    height:34px;
+
+    border-radius:50%;
+
+    background:
+
+    linear-gradient(
+
+    145deg,
+
+    #8b5b39,
+
+    #59331f
+
+    );
+
+    box-shadow:
+
+    inset -2px -2px 4px rgba(0,0,0,.18),
+
+    inset 2px 2px 3px rgba(255,255,255,.08),
+
+    0 8px 16px rgba(0,0,0,.15);
+
+    animation:drinkBean 6s ease-in-out infinite;
+
+}
+
+.drink-bean::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:50%;
+
+    top:10%;
+
+    transform:translateX(-50%);
+
+    width:2px;
+
+    height:80%;
+
+    background:#d7b185;
+
+    border-radius:999px;
+
+}
+
+.bean-1{
+
+    top:30px;
+
+    right:30px;
+
+}
+
+.bean-2{
+
+    top:95px;
+
+    left:25px;
+
+    animation-delay:1.5s;
+
+}
+
+.bean-3{
+
+    bottom:40px;
+
+    right:35px;
+
+    animation-delay:3s;
+
+}
+
+
+/*========================================
+ FLOATING PARTICLES
+========================================*/
+
+.drink-particle{
+
+    position:absolute;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.35);
+
+    filter:blur(2px);
+
+    animation:drinkParticle 10s linear infinite;
+
+}
+
+.drink-particle.small{
+
+    width:6px;
+
+    height:6px;
+
+}
+
+.drink-particle.medium{
+
+    width:10px;
+
+    height:10px;
+
+}
+
+.drink-particle.large{
+
+    width:14px;
+
+    height:14px;
+
+}
+
+
+/*========================================
+ KEYFRAMES
+========================================*/
+
+@keyframes drinkRotate{
+
+    from{
+
+        transform:rotate(0deg);
+
+    }
+
+    to{
+
+        transform:rotate(360deg);
+
+    }
+
+}
+
+@keyframes drinkBean{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-12px) rotate(8deg);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+@keyframes drinkParticle{
+
+    0%{
+
+        opacity:0;
+
+        transform:translateY(0);
+
+    }
+
+    25%{
+
+        opacity:.8;
+
+    }
+
+    100%{
+
+        opacity:0;
+
+        transform:translateY(-120px);
+
+    }
+
+}
+/*==================================================
+ SIGNATURE DRINKS - PART 4
+ HOVER EFFECTS + BUTTON + GLASS
+==================================================*/
+
+.drink-card{
+
+    cursor:pointer;
+
+    transition:
+    transform .45s ease,
+    box-shadow .45s ease;
+
+}
+
+.drink-card:hover{
+
+    transform:
+    translateY(-15px)
+    scale(1.02);
+
+    box-shadow:
+    0 45px 90px rgba(0,0,0,.18);
+
+}
+
+
+/*========================================
+ SHINE EFFECT
+========================================*/
+
+.drink-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+    linear-gradient(
+    120deg,
+    transparent,
+    rgba(255,255,255,.22),
+    transparent
+    );
+
+    transform:translateX(-120%);
+
+    transition:1.1s;
+
+}
+
+.drink-card:hover::before{
+
+    transform:translateX(120%);
+
+}
+
+
+/*========================================
+ ICON
+========================================*/
+
+.drink-card:hover .drink-icon{
+
+    transform:
+    rotate(-12deg)
+    scale(1.12);
+
+    box-shadow:
+    0 25px 45px rgba(0,0,0,.22);
+
+}
+
+
+/*========================================
+ TITLE
+========================================*/
+
+.drink-card h3{
+
+    transition:.35s ease;
+
+}
+
+.drink-card:hover h3{
+
+    color:var(--secondary);
+
+}
+
+
+/*========================================
+ DESCRIPTION
+========================================*/
+
+.drink-card p{
+
+    transition:.35s ease;
+
+}
+
+.drink-card:hover p{
+
+    color:#564d45;
+
+}
+
+
+/*========================================
+ PRICE
+========================================*/
+
+.drink-footer strong{
+
+    transition:.35s ease;
+
+}
+
+.drink-card:hover .drink-footer strong{
+
+    transform:scale(1.08);
+
+    color:var(--secondary);
+
+}
+
+
+/*========================================
+ BUTTON
+========================================*/
+
+.drink-footer button{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.drink-footer button::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+    linear-gradient(
+    120deg,
+    transparent,
+    rgba(255,255,255,.28),
+    transparent
+    );
+
+    transform:translateX(-120%);
+
+    transition:1s;
+
+}
+
+.drink-footer button:hover::before{
+
+    transform:translateX(120%);
+
+}
+
+.drink-footer button:hover{
+
+    background:var(--primary);
+
+    transform:
+    translateY(-4px);
+
+}
+
+
+/*========================================
+ FLOATING CARD
+========================================*/
+
+.drink-card{
+
+    animation:drinkFloat 6s ease-in-out infinite;
+
+}
+
+@keyframes drinkFloat{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-8px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+/*==================================================
+ SIGNATURE DRINKS - PART 5
+ TABLET RESPONSIVE
+==================================================*/
+
+@media (max-width:1200px){
+
+.drinks{
+
+padding:120px 6%;
+
+}
+
+.drinks-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+gap:30px;
+
+}
+
+.drinks h2{
+
+font-size:clamp(48px,5vw,72px);
+
+}
+
+.drinks-description{
+
+font-size:1rem;
+
+}
+
+.drink-card{
+
+padding:30px;
+
+}
+
+.drink-card h3{
+
+font-size:34px;
+
+}
+
+.drink-icon{
+
+width:82px;
+
+height:82px;
+
+}
+
+.drink-footer strong{
+
+font-size:28px;
+
+}
+
+}
+
+
+/*========================================*/
+
+@media (max-width:992px){
+
+.drinks{
+
+padding:100px 35px;
+
+}
+
+.drinks-grid{
+
+grid-template-columns:1fr;
+
+max-width:620px;
+
+margin:auto;
+
+gap:35px;
+
+}
+
+.drinks-heading{
+
+margin-bottom:60px;
+
+}
+
+.drinks h2{
+
+font-size:58px;
+
+}
+
+.drinks-description{
+
+max-width:600px;
+
+}
+
+.drink-card{
+
+text-align:center;
+
+}
+
+.drink-category{
+
+display:block;
+
+}
+
+.drink-icon{
+
+margin:0 auto 24px;
+
+}
+
+.drink-footer{
+
+justify-content:center;
+
+gap:25px;
+
+}
+
+.drink-footer button{
+
+padding:14px 24px;
+
+}
+
+}
+
+
+/*========================================*/
+
+@media (max-width:768px){
+
+.drinks{
+
+padding:90px 28px;
+
+}
+
+.drinks h2{
+
+font-size:48px;
+
+}
+
+.drinks-description{
+
+font-size:.95rem;
+
+line-height:1.9;
+
+}
+
+.drink-card{
+
+padding:28px;
+
+}
+
+.drink-card h3{
+
+font-size:32px;
+
+}
+
+.drink-card p{
+
+font-size:.92rem;
+
+}
+
+.drink-icon{
+
+width:75px;
+
+height:75px;
+
+font-size:28px;
+
+}
+
+.drink-footer strong{
+
+font-size:26px;
+
+}
+
+}
+/*==================================================
+ SIGNATURE DRINKS - PART 6
+ MOBILE RESPONSIVE + FINAL POLISH
+==================================================*/
+
+@media (max-width:640px){
+
+.drinks{
+
+padding:80px 22px;
+
+}
+
+.drinks-heading{
+
+margin-bottom:50px;
+
+}
+
+.drinks-tag{
+
+font-size:.72rem;
+
+letter-spacing:4px;
+
+}
+
+.drinks h2{
+
+font-size:38px;
+
+line-height:1.08;
+
+}
+
+.drinks-description{
+
+font-size:.9rem;
+
+line-height:1.8;
+
+}
+
+.drinks-grid{
+
+grid-template-columns:1fr;
+
+gap:25px;
+
+}
+
+.drink-card{
+
+padding:22px;
+
+border-radius:24px;
+
+}
+
+.drink-icon{
+
+width:68px;
+
+height:68px;
+
+margin:0 auto 20px;
+
+font-size:24px;
+
+}
+
+.drink-icon svg{
+
+width:26px;
+
+height:26px;
+
+}
+
+.drink-category{
+
+display:block;
+
+font-size:.68rem;
+
+letter-spacing:2px;
+
+text-align:center;
+
+}
+
+.drink-card h3{
+
+font-size:28px;
+
+text-align:center;
+
+margin-bottom:14px;
+
+}
+
+.drink-card p{
+
+font-size:.86rem;
+
+line-height:1.7;
+
+text-align:center;
+
+margin-bottom:25px;
+
+}
+
+.drink-footer{
+
+flex-direction:column;
+
+gap:15px;
+
+}
+
+.drink-footer strong{
+
+font-size:28px;
+
+}
+
+.drink-footer button{
+
+width:100%;
+
+justify-content:center;
+
+padding:15px;
+
+}
+
+.drink-bean{
+
+display:none;
+
+}
+
+.drink-card .circle{
+
+display:none;
+
+}
+
+}
+
+
+/*========================================*/
+
+@media (max-width:420px){
+
+.drinks{
+
+padding:70px 18px;
+
+}
+
+.drinks h2{
+
+font-size:32px;
+
+}
+
+.drinks-description{
+
+font-size:.82rem;
+
+}
+
+.drink-card{
+
+padding:18px;
+
+}
+
+.drink-icon{
+
+width:60px;
+
+height:60px;
+
+}
+
+.drink-icon svg{
+
+width:22px;
+
+height:22px;
+
+}
+
+.drink-card h3{
+
+font-size:24px;
+
+}
+
+.drink-card p{
+
+font-size:.8rem;
+
+}
+
+.drink-footer strong{
+
+font-size:24px;
+
+}
+
+.drink-footer button{
+
+font-size:.8rem;
+
+padding:14px;
+
+}
+
+}
+
+
+/*========================================
+ PERFORMANCE
+========================================*/
+
+.drink-card,
+.drink-icon,
+.drink-footer button,
+.drink-bean{
+
+will-change:transform,opacity;
+
+}
+
+
+/*========================================
+ SMOOTH RENDERING
+========================================*/
+
+.drinks *,
+.drinks *::before,
+.drinks *::after{
+
+backface-visibility:hidden;
+
+transform-style:preserve-3d;
+
+-webkit-font-smoothing:antialiased;
+
+}
+
+
+/*========================================
+ FINAL TRANSITIONS
+========================================*/
+
+.drinks h2,
+.drinks p,
+.drinks span,
+.drinks button,
+.drinks div{
+
+transition:.35s ease;
+
+}
+
+
+/*========================================
+ SECTION COMPLETE
+========================================*/
+
+.drinks{
+
+isolation:isolate;
+
+}
